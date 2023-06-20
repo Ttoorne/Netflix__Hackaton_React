@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import SeriesPage from "../pages/SeriesPage";
 import FilmsPage from "../pages/FilmsPage";
 import CartoonsPage from "../pages/CartoonsPage";
+import ProductPage from "../pages/ProductPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -52,6 +53,11 @@ const MainRoutes = () => {
       link: "/admin",
       element: <AdminPage />,
       id: 2,
+    },
+    {
+      link: "/products",
+      element: <ProductPage />,
+      id: 10,
     },
   ];
 
