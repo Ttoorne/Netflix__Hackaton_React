@@ -48,14 +48,14 @@ const MainRoutes = () => {
       element: <CartoonsPage />,
       id: 9,
     },
-  ];
-
-  const PRIVATE_ROUTES = [
     {
       link: "/admin",
       element: <AdminPage />,
       id: 2,
     },
+  ];
+
+  const PRIVATE_ROUTES = [
     {
       link: "/edit/:id",
       element: <EditProductPage />,

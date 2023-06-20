@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "title": "Test",
+      "description": "Test",
+      "picture": "https://static.vecteezy.com/system/resources/previews/009/273/280/original/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg",
+      "price": 12,
+      "category": "Series",
+      "genre": "Comedy",
+      "id": 1
+    },
+    {
+      "title": "Test2",
+      "description": "Test2",
+      "picture": "https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_2560%2Cc_limit/phonepicutres-TA.jpg",
+      "price": 32,
+      "category": "Films",
+      "genre": "Drama",
+      "id": 2
+    },
+    {
+      "title": "Test3",
+      "description": "Test3",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZdgZFqoswKh_wN7LvRN6dtednCQqnuZqMnu9bYKf&s",
+      "price": 99,
+      "category": "Cartoons",
+      "genre": "Drama",
+      "id": 3
+    }
+  ]
+}
