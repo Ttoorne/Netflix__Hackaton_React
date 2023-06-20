@@ -1,0 +1,75 @@
+import React from "react";
+import HomePage from "../pages/HomePage";
+import NotFoundPage from "../pages/NotFoundPage";
+import CartPage from "../pages/CartPage";
+import AdminPage from "../pages/AdminPage";
+import EditProductPage from "../pages/EditProductPage";
+import { Route, Routes } from "react-router-dom";
+import SeriesPage from "../pages/SeriesPage";
+import FilmsPage from "../pages/FilmsPage";
+import CartoonsPage from "../pages/CartoonsPage";
+
+const MainRoutes = () => {
+  const PUBLIC_ROUTES = [
+    {
+      link: "/",
+      element: <HomePage />,
+      id: 1,
+    },
+
+    {
+      link: "*",
+      element: <NotFoundPage />,
+      id: 3,
+    },
+    {
+      link: "/series",
+      element: <SeriesPage />,
+      id: 4,
+    },
+
+    // {
+    //   link: "/details/:id",
+    //   element: <ProductDetails />,
+    //   id: 6,
+    // },
+    {
+      link: "/cart",
+      element: <CartPage />,
+      id: 7,
+    },
+    {
+      link: "/films",
+      element: <FilmsPage />,
+      id: 8,
+    },
+    {
+      link: "/cartoons",
+      element: <CartoonsPage />,
+      id: 9,
+    },
+  ];
+
+  const PRIVATE_ROUTES = [
+    {
+      link: "/admin",
+      element: <AdminPage />,
+      id: 2,
+    },
+    {
+      link: "/edit/:id",
+      element: <EditProductPage />,
+      id: 5,
+    },
+  ];
+
+  return (
+    <Routes>
+      {PUBLIC_ROUTES.map((item) => (
+        <Route path={item.link} element={item.element} key={item.id} />
+      ))}
+    </Routes>
+  );
+};
+
+export default MainRoutes;
