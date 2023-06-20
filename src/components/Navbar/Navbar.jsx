@@ -227,8 +227,9 @@ function Navbar() {
               border: "1px solid",
               display: "flex",
               alignItems: "center",
-              width: "300px",
+              width: "250px",
               height: "40px",
+              marginRight: "20px",
             }}
           >
             <SearchIcon sx={{ marginLeft: "10px", marginRight: "10px" }} />
@@ -237,7 +238,7 @@ function Navbar() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               fullWidth
-              label="Поиск"
+              // label="Поиск"
               variant="standard"
               sx={{
                 "& .MuiInputBase-input": {
