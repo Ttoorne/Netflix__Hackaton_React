@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 
 const pages = [
   { name: "Главная", link: "/", id: 1 },
+  { name: "Все", link: "/products", id: 2 },
   { name: "Сериалы", link: "/series", id: 4 },
   { name: "Фильмы", link: "/films", id: 8 },
   { name: "Мультфильмы", link: "/cartoons", id: 9 },
