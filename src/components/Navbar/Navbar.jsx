@@ -12,7 +12,12 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import SearchIcon from "@mui/icons-material/Search";
+import { InputBase, TextField } from "@mui/material";
+import { styled } from "@mui/system";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const pages = [
   { name: "Главная", link: "/", id: 1 },
@@ -21,6 +26,33 @@ const pages = [
   { name: "Мультфильмы", link: "/cartoons", id: 9 },
 ];
 const settings = ["Профиль", "Избранное", "Корзина", "Выйти"];
+
+const SearchIconWrapper = styled("div")(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: "white", // Modify the color here
+  "& .MuiInputBase-input": {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      width: "12ch",
+      "&:focus": {
+        width: "20ch",
+      },
+    },
+  },
+}));
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,6 +72,13 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get("q") || "");
+
+  useEffect(() => {
+    setSearchParams({ q: search });
+  }, [search]);
 
   return (
     <AppBar
@@ -182,6 +221,31 @@ function Navbar() {
             ))}
           </Box>
 
+          <Box
+            sx={{
+              border: "1px solid",
+              display: "flex",
+              alignItems: "center",
+              width: "300px",
+              height: "40px",
+            }}
+          >
+            <SearchIcon sx={{ marginLeft: "10px", marginRight: "10px" }} />
+
+            <TextField
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              fullWidth
+              label="Поиск"
+              variant="standard"
+              sx={{
+                "& .MuiInputBase-input": {
+                  color: "#ffffff", // Set the input text color to white
+                },
+              }}
+            />
+          </Box>
+
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -216,4 +280,5 @@ function Navbar() {
     </AppBar>
   );
 }
+
 export default Navbar;
