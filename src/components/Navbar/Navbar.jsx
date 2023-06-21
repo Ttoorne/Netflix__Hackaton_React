@@ -230,11 +230,6 @@ function Navbar() {
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}>
-              {email ? (
-                <MenuItem>
-                  <Typography textAlign="center">Hello, {email}!</Typography>
-                </MenuItem>
-              ) : null}
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
@@ -246,11 +241,13 @@ function Navbar() {
                     handleCloseUserMenu();
                     handleLogout();
                   }}>
-                  {' '}
                   <Typography textAlign="center">Выйти</Typography>
                 </MenuItem>
               ) : (
-                <MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleCloseUserMenu();
+                  }}>
                   <Link to="/auth">
                     <Typography textAlign="center">
                       Войти или зарегестрироваться

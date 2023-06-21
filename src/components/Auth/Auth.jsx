@@ -7,9 +7,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useAuth } from '../../contexts/AuthContextProvider';
-import './Auth.css';
 
 export default function Auth() {
   const {
@@ -39,12 +37,19 @@ export default function Auth() {
   };
 
   return (
-    <Box className="container">
+    <Box
+      sx={{
+        width: '100%',
+        padding: '100px 0px',
+        backgroundImage:
+          "url('https://assets.nflxext.com/ffe/siteui/vlv3/39f3c979-c105-4948-9c51-611eedf3a6fd/cbcb1617-1a2b-46ce-96ef-768e2a9c591f/KG-ru-20230612-popsignuptwoweeks-perspective_alpha_website_medium.jpg')",
+      }}>
       <Container
         component="main"
         maxWidth="xs"
         sx={{
           border: '1px solid #000',
+          borderRadius: '20px',
           backgroundColor: 'rgba(0, 0, 0, 0.7);',
           height: '600px',
         }}>
@@ -75,6 +80,7 @@ export default function Auth() {
               fullWidth
               id="email"
               label="Адрес электронной почты"
+              InputLabelProps={{ style: { color: '#8c8c8c' } }}
               name="email"
               autoComplete="email"
               autoFocus
@@ -90,6 +96,7 @@ export default function Auth() {
               fullWidth
               name="password"
               label="Пароль"
+              InputLabelProps={{ style: { color: '#8c8c8c' } }}
               type="password"
               id="password"
               autoComplete="current-password"
@@ -104,7 +111,8 @@ export default function Auth() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2, backgroundColor: 'red' }}
+                color="error"
+                sx={{ mt: 3, mb: 2, height: '50px' }}
                 onClick={() => {
                   handleLogin();
                 }}>
@@ -115,7 +123,8 @@ export default function Auth() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2, backgroundColor: 'red' }}
+                color="error"
+                sx={{ mt: 3, mb: 2, height: '50px' }}
                 onClick={() => {
                   handleSignUp();
                 }}>
