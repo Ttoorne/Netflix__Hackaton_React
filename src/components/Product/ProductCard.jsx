@@ -22,7 +22,7 @@ export default function ProductCard({ item }) {
   //   } = useAuth();
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, marginBottom: "15%" }}>
       <CardMedia
         sx={{
           height: 0,
@@ -31,7 +31,7 @@ export default function ProductCard({ item }) {
           maxWidth: "100%",
         }}
         image={item.picture}
-        title="green iguana"
+        title="picture"
         onClick={() => navigate(`/details/${item.id}`)}
       />
       <CardContent>
@@ -40,9 +40,6 @@ export default function ProductCard({ item }) {
         </Typography>
         <Typography gutterBottom variant="p" component="div">
           {item.description}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {item.price} $
         </Typography>
       </CardContent>
       <div

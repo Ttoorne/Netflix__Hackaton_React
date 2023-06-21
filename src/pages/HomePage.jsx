@@ -1,7 +1,10 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       className="container"
@@ -64,6 +67,7 @@ const HomePage = () => {
               color: "white",
             },
           }}
+          onClick={() => navigate("/products")}
         >
           Начать смотреть
         </Button>

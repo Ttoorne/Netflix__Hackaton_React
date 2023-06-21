@@ -55,7 +55,7 @@ const AddProduct = () => {
         variant="h4"
         textAlign="center"
       >
-        Admin Page
+        Добавить фильм
       </Typography>
       <Box
         sx={{
@@ -64,6 +64,8 @@ const AddProduct = () => {
           padding: "5% 5%",
           boxShadow: "0px 0px 21px 15px rgb(229, 9, 20)",
           borderRadius: "10px",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <TextField
@@ -72,7 +74,6 @@ const AddProduct = () => {
             borderRadius: "5px",
             marginBottom: "20px",
             boxShadow: "0px 0px 7px 9px rgba(255, 67, 0, 0.2) inset",
-            padding: "1%",
             textAlign: "center",
             fontSize: "1rem",
           }}
@@ -137,20 +138,22 @@ const AddProduct = () => {
 
         <Box
           sx={{
-            backgroundColor: "white",
             borderRadius: "5px",
             marginBottom: "10px",
+            display: "flex",
+            justifyContent: "center",
+            padding: "2% 0",
           }}
         >
           <GenreSelect product={product} setProduct={setProduct} />
         </Box>
 
-        <Box sx={{ backgroundColor: "orange", borderRadius: "5px" }}>
+        <Box>
           <Button
             sx={{
-              backgroundColor: "white",
+              backgroundColor: "red",
               borderRadius: "5px",
-              color: "black",
+              color: "rgb(255,255,255)",
               fontSize: "22px",
               fontWeight: "900",
               fontFamily: "segoe ui",
@@ -165,7 +168,7 @@ const AddProduct = () => {
             size="large"
             className="admin__button"
           >
-            Добавить фильм
+            Добавить
           </Button>
         </Box>
       </Box>

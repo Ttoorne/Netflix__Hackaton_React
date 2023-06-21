@@ -1,44 +1,75 @@
 import React, { useEffect, useState } from "react";
-import { Box, Grid, Pagination } from "@mui/material";
+import { Box, Grid, Pagination, Typography } from "@mui/material";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import { useSearchParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
+import GenreSelect from "./GenreSelect";
 
 const SeriesList = () => {
   const { getProducts, products } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedGenre, setSelectedGenre] = useState("");
+  const [page, setPage] = useState(1);
+  const itemsPerPage = 9; // 3 cards per row and 3 rows
 
   useEffect(() => {
     getProducts();
-    setPage(1);
   }, [searchParams]);
 
-  const [page, setPage] = useState(1);
-  const itemsPerPage = 9; // 3 cards per row and 3 rows
-  const count = Math.ceil(products.length / itemsPerPage);
+  const seriesProducts = products.filter(
+    (item) =>
+      item.category === "Series" &&
+      (selectedGenre === "" || item.genre === selectedGenre)
+  );
 
-  const handleChange = (e, p) => {
-    setPage(p);
+  const count = Math.ceil(seriesProducts.length / itemsPerPage);
+
+  const handleChange = (event, value) => {
+    setPage(value);
   };
 
-  function currentData() {
-    const begin = (page - 1) * itemsPerPage;
-    const end = begin + itemsPerPage;
-    return products.slice(begin, end);
-  }
-
-  const seriesProducts = products.filter((item) => item.category === "Series");
+  const currentData = seriesProducts.slice(
+    (page - 1) * itemsPerPage,
+    page * itemsPerPage
+  );
 
   return (
     <Grid item md={9}>
       <Box
         sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          width: "90%",
+          margin: "5% auto 3%",
+        }}
+      >
+        <Typography
+          variant="h1"
+          sx={{
+            color: "rgb(255, 255, 255)",
+            fontSize: "3rem",
+            fontWeight: "400",
+            paddingRight: "3%",
+          }}
+        >
+          Сериалы
+        </Typography>
+        <GenreSelect
+          product={{ genre: selectedGenre }}
+          setProduct={(product) => setSelectedGenre(product.genre)}
+        />
+      </Box>
+      <Box
+        sx={{
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
           gap: "20px",
+          width: "90%",
+          margin: "auto",
         }}
       >
-        {seriesProducts.map((item) => (
+        {currentData.map((item) => (
           <ProductCard
             key={item.id}
             item={item}
@@ -46,7 +77,39 @@ const SeriesList = () => {
           />
         ))}
       </Box>
-      {/* <Pagination count={count} page={page} onChange={handleChange} /> */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          paddingBottom: "10%",
+          backgroundColor: "black",
+          color: "white",
+          "& .MuiPagination-root": {
+            "& .MuiPaginationItem-root": {
+              color: "white",
+              fontSize: "1rem",
+            },
+            "& .Mui-selected": {
+              backgroundColor: "white",
+              color: "black",
+              fontWeight: "bold",
+            },
+            "& .MuiPaginationItem-root:hover": {
+              backgroundColor: "black",
+              color: "#fff",
+              border: "1px solid #616161",
+            },
+          },
+        }}
+      >
+        <Pagination
+          count={count}
+          page={page}
+          onChange={handleChange}
+          showFirstButton
+          showLastButton
+        />
+      </Box>
     </Grid>
   );
 };

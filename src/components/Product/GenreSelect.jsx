@@ -1,9 +1,9 @@
-import * as React from "react";
+import React from "react";
 import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import OutlinedInput from "@mui/material/OutlinedInput";
 
 export default function GenreSelect({ product, setProduct }) {
   function handleChange(e) {
@@ -11,16 +11,21 @@ export default function GenreSelect({ product, setProduct }) {
   }
 
   return (
-    <FormControl fullWidth>
-      <InputLabel id="demo-simple-select-label">Жанр</InputLabel>
+    <FormControl fullWidth sx={{ marginTop: "20px" }}>
       <Select
-        labelId="demo-simple-select-label"
-        id="demo-simple-select"
-        defaultValue=""
-        label="Жанр"
         value={product.genre}
         onChange={handleChange}
+        input={<OutlinedInput />}
+        displayEmpty
+        variant="outlined"
+        size="small"
+        sx={{
+          backgroundColor: "#fff",
+          borderRadius: "4px",
+          width: "15%",
+        }}
       >
+        <MenuItem value="">Все жанры</MenuItem>
         <MenuItem value="Comedy">Комедия</MenuItem>
         <MenuItem value="Action">Боевик</MenuItem>
         <MenuItem value="Horror">Ужасы</MenuItem>
