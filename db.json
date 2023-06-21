@@ -28,13 +28,103 @@
       "id": 3
     },
     {
-      "title": "testt",
-      "description": "ssdsd",
-      "picture": "data:image/jpeg;base64,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",
-      "price": 99,
+      "title": "Test4",
+      "description": "Test4",
+      "picture": "Test",
+      "price": 4124124,
+      "category": "Cartoons",
+      "genre": "Comedy",
+      "id": 4
+    },
+    {
+      "title": "Test",
+      "description": "Test",
+      "picture": "https://static.vecteezy.com/system/resources/previews/009/273/280/original/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg",
+      "price": 12,
+      "category": "Series",
+      "genre": "Comedy",
+      "id": 1
+    },
+    {
+      "title": "Test",
+      "description": "Test",
+      "picture": "https://static.vecteezy.com/system/resources/previews/009/273/280/original/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg",
+      "price": 12,
+      "category": "Series",
+      "genre": "Comedy",
+      "id": 1
+    },
+    {
+      "title": "Test",
+      "description": "Test",
+      "picture": "https://static.vecteezy.com/system/resources/previews/009/273/280/original/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg",
+      "price": 12,
+      "category": "Series",
+      "genre": "Comedy",
+      "id": 1
+    },
+    {
+      "title": "Человек-паук: Паутина вселенных",
+      "description": "Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.",
+      "picture": "https://static.wikia.nocookie.net/marveldatabase/images/a/a5/Spider-Man_Across_the_Spider-Verse_poster_001.jpg/revision/latest?cb=20221220151148",
+      "price": 59,
       "category": "Cartoons",
       "genre": "Action",
-      "id": 4
+      "id": 5
+    },
+    {
+      "title": "Человек-паук: Паутина вселенных",
+      "description": "Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.",
+      "picture": "https://upload.wikimedia.org/wikipedia/ru/thumb/1/1d/Spider-Man_-_Across_the_Spider-Verse.jpg/1200px-Spider-Man_-_Across_the_Spider-Verse.jpg",
+      "price": 60,
+      "category": "Cartoons",
+      "genre": "Comedy",
+      "id": 6
+    },
+    {
+      "title": "Одноклассники",
+      "description": "5 друзей детства встречаются после 30 лет разлуки в летнем доме у озера на уик-энд в День независимости. Они приехали сюда с семьями, чтобы почтить память школьного тренера по баскетболу и отпраздновать тридцатую годовщину чемпионата, в котором они вместе выиграли.",
+      "picture": "https://www.kino-teatr.ru/art/3967/md.jpg",
+      "price": 50,
+      "category": "Series",
+      "genre": "",
+      "id": 7
+    },
+    {
+      "title": "Dno",
+      "description": "Lasso",
+      "picture": "https://www.kino-teatr.ru/art/3967/md.jpg",
+      "price": 123,
+      "category": "Series",
+      "genre": "Melodrama",
+      "id": 8
+    },
+    {
+      "title": "Horror",
+      "description": "Horror",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVuJ4CaSU3OEoy-DNHt5qlYtSF5EA2eQgMazU_O0nvedVJJnrG-O4d-ksEdWPmyYTTRI&usqp=CAU",
+      "price": 12,
+      "category": "Films",
+      "genre": "Horror",
+      "id": 9
+    },
+    {
+      "title": "Action",
+      "description": "Action",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVuJ4CaSU3OEoy-DNHt5qlYtSF5EA2eQgMazU_O0nvedVJJnrG-O4d-ksEdWPmyYTTRI&usqp=CAU",
+      "price": 100,
+      "category": "Films",
+      "genre": "Action",
+      "id": 10
+    },
+    {
+      "title": "Thriller",
+      "description": "Thriller",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVuJ4CaSU3OEoy-DNHt5qlYtSF5EA2eQgMazU_O0nvedVJJnrG-O4d-ksEdWPmyYTTRI&usqp=CAU",
+      "price": 777,
+      "category": "Films",
+      "genre": "Thriller",
+      "id": 11
     }
   ]
 }

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       className="container"
@@ -59,7 +62,8 @@ const HomePage = () => {
               filter: 'brightness(0.8)',
               color: 'white',
             },
-          }}>
+          }}
+          onClick={() => navigate('/products')}>
           Начать смотреть
         </Button>
       </Box>
@@ -103,7 +107,7 @@ const HomePage = () => {
           <img
             src="	https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
             alt=""
-            width={'450px'}
+            width={'100%'}
             height={'300px'}
           />
         </Box>
