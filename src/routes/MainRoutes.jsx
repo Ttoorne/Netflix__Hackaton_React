@@ -9,6 +9,7 @@ import SeriesPage from "../pages/SeriesPage";
 import FilmsPage from "../pages/FilmsPage";
 import CartoonsPage from "../pages/CartoonsPage";
 import ProductPage from "../pages/ProductPage";
+import ProductDetail from "../components/ProductDetails/ProductDetails";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -29,11 +30,11 @@ const MainRoutes = () => {
       id: 4,
     },
 
-    // {
-    //   link: "/details/:id",
-    //   element: <ProductDetails />,
-    //   id: 6,
-    // },
+    {
+      link: "/details/:id",
+      element: <ProductDetail />,
+      id: 6,
+    },
     {
       link: "/cart",
       element: <CartPage />,

@@ -10,6 +10,7 @@ const AddProduct = () => {
     description: "",
     picture: "",
     price: 0,
+    trailer: "",
     category: "",
     genre: "",
   });
@@ -39,6 +40,7 @@ const AddProduct = () => {
       description: "",
       picture: "",
       price: 0,
+      trailer: "",
       category: "",
       genre: "",
     });
@@ -82,7 +84,7 @@ const AddProduct = () => {
           name="title"
           label="Название"
           variant="outlined"
-          value={product.title} // Установка значения из состояния
+          value={product.title}
         />
         <TextField
           sx={{
@@ -96,7 +98,7 @@ const AddProduct = () => {
           name="description"
           label="Описание"
           variant="outlined"
-          value={product.description} // Установка значения из состояния
+          value={product.description}
         />
         <TextField
           sx={{
@@ -110,7 +112,7 @@ const AddProduct = () => {
           name="picture"
           label="Изображение"
           variant="outlined"
-          value={product.picture} // Установка значения из состояния
+          value={product.picture}
         />
         <TextField
           sx={{
@@ -124,7 +126,21 @@ const AddProduct = () => {
           name="price"
           label="Цена"
           variant="outlined"
-          value={product.price} // Установка значения из состояния
+          value={product.price}
+        />
+        <TextField
+          sx={{
+            backgroundColor: "white",
+            borderRadius: "5px",
+            marginBottom: "20px",
+            boxShadow: "0px 0px 7px 9px rgba(255, 67, 0, 0.2) inset",
+          }}
+          fullWidth
+          onChange={handleInp}
+          name="trailer"
+          label="Ссылка на трейлер"
+          variant="outlined"
+          value={product.trailer}
         />
         <Box
           sx={{
@@ -135,7 +151,6 @@ const AddProduct = () => {
         >
           <CategorySelect product={product} setProduct={setProduct} />
         </Box>
-
         <Box
           sx={{
             borderRadius: "5px",
@@ -147,7 +162,6 @@ const AddProduct = () => {
         >
           <GenreSelect product={product} setProduct={setProduct} />
         </Box>
-
         <Box>
           <Button
             sx={{

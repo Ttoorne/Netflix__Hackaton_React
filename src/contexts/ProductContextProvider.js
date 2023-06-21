@@ -45,8 +45,8 @@ const ProductContextProvider = ({ children }) => {
     const { data } = await axios(`${API}${window.location.search}`);
     dispatch({ type: ACTIONS.GET_PRODUCTS, payload: data });
   };
+  
   //! delete request (DELETE)
-
   const deleteProduct = async (id) => {
     await axios.delete(`${API}/${id}`);
     getProducts();

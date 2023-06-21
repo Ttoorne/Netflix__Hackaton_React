@@ -55,15 +55,14 @@ export default function ProductCard({ item }) {
           alignItems: "center",
         }}
       >
+        <Button size="small" onClick={() => deleteProduct(item.id)}>
+          Удалить
+        </Button>
+        <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+          Редактировать
+        </Button>
         {/* {email === ADMIN ? (
           <>
-            <Button size="small" onClick={() => deleteProduct(item.id)}>
-              Delete
-            </Button>
-            <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
-              Edit
-            </Button>
-          </>
         ) : (
           <IconButton
             sx={{

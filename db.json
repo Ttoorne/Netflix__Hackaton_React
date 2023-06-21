@@ -1,78 +1,6 @@
 {
   "products": [
     {
-      "title": "Test",
-      "description": "Test",
-      "picture": "https://static.vecteezy.com/system/resources/previews/009/273/280/original/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg",
-      "price": 12,
-      "category": "Series",
-      "genre": "Comedy",
-      "id": 1
-    },
-    {
-      "title": "Test2",
-      "description": "Test2",
-      "picture": "https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_2560%2Cc_limit/phonepicutres-TA.jpg",
-      "price": 32,
-      "category": "Films",
-      "genre": "Drama",
-      "id": 2
-    },
-    {
-      "title": "Test3",
-      "description": "Test3",
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZdgZFqoswKh_wN7LvRN6dtednCQqnuZqMnu9bYKf&s",
-      "price": 99,
-      "category": "Cartoons",
-      "genre": "Drama",
-      "id": 3
-    },
-    {
-      "title": "Test4",
-      "description": "Test4",
-      "picture": "Test",
-      "price": 4124124,
-      "category": "Cartoons",
-      "genre": "Comedy",
-      "id": 4
-    },
-    {
-      "title": "Test",
-      "description": "Test",
-      "picture": "https://static.vecteezy.com/system/resources/previews/009/273/280/original/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg",
-      "price": 12,
-      "category": "Series",
-      "genre": "Comedy",
-      "id": 1
-    },
-    {
-      "title": "Test",
-      "description": "Test",
-      "picture": "https://static.vecteezy.com/system/resources/previews/009/273/280/original/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg",
-      "price": 12,
-      "category": "Series",
-      "genre": "Comedy",
-      "id": 1
-    },
-    {
-      "title": "Test",
-      "description": "Test",
-      "picture": "https://static.vecteezy.com/system/resources/previews/009/273/280/original/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg",
-      "price": 12,
-      "category": "Series",
-      "genre": "Comedy",
-      "id": 1
-    },
-    {
-      "title": "Человек-паук: Паутина вселенных",
-      "description": "Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.",
-      "picture": "https://static.wikia.nocookie.net/marveldatabase/images/a/a5/Spider-Man_Across_the_Spider-Verse_poster_001.jpg/revision/latest?cb=20221220151148",
-      "price": 59,
-      "category": "Cartoons",
-      "genre": "Action",
-      "id": 5
-    },
-    {
       "title": "Человек-паук: Паутина вселенных",
       "description": "Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.",
       "picture": "https://upload.wikimedia.org/wikipedia/ru/thumb/1/1d/Spider-Man_-_Across_the_Spider-Verse.jpg/1200px-Spider-Man_-_Across_the_Spider-Verse.jpg",
@@ -82,49 +10,43 @@
       "id": 6
     },
     {
-      "title": "Одноклассники",
-      "description": "5 друзей детства встречаются после 30 лет разлуки в летнем доме у озера на уик-энд в День независимости. Они приехали сюда с семьями, чтобы почтить память школьного тренера по баскетболу и отпраздновать тридцатую годовщину чемпионата, в котором они вместе выиграли.",
-      "picture": "https://www.kino-teatr.ru/art/3967/md.jpg",
-      "price": 50,
-      "category": "Series",
-      "genre": "",
+      "title": "Batman",
+      "description": "После двух лет поисков правосудия на улицах Готэма для своих сограждан Бэтмен становится олицетворением беспощадного возмездия. Когда в городе происходит серия жестоких нападений на представителей элиты, загадочные улики приводят Брюса Уэйна в самые темные закоулки преступного мира, где он встречает Женщину-Кошку, Пингвина, Кармайна Фальконе и Загадочника. Теперь под прицелом оказывается сам Бэтмен, которому предстоит отличить друга от врага и восстановить справедливость во имя Готэма.",
+      "picture": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQPn2H9xkTCBu6OGfJFU88kQnPaqefb-dTnP8Tjns0-0gzrt4xruHEK7KEkQm0yPfCk",
+      "price": 60,
+      "category": "Films",
+      "genre": "Action",
       "id": 7
     },
     {
-      "title": "Dno",
-      "description": "Lasso",
-      "picture": "https://www.kino-teatr.ru/art/3967/md.jpg",
-      "price": 123,
-      "category": "Series",
-      "genre": "Melodrama",
+      "title": "Flash",
+      "description": "Физик-ядерщик Барри Аллен в ходе неудачного научного эксперимента отравился ядохимикатами. Но, к собственному удивлению, не погиб, а приобрел новые поразительные способности – теперь он способен развивать невообразимую скорость.",
+      "picture": "",
+      "price": 70,
+      "trailer": "https://www.youtube.com/watch?v=r51cYVZWKdY",
+      "category": "Films",
+      "genre": "Comedy",
       "id": 8
     },
     {
-      "title": "Horror",
-      "description": "Horror",
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVuJ4CaSU3OEoy-DNHt5qlYtSF5EA2eQgMazU_O0nvedVJJnrG-O4d-ksEdWPmyYTTRI&usqp=CAU",
-      "price": 12,
-      "category": "Films",
-      "genre": "Horror",
+      "title": "Shrek",
+      "description": "«Шрек» (англ. Shrek) — американский компьютерно-анимационный фэнтезийный комедийный фильм, основанный на одноименной детской книге Уильяма Стейга. Снятый Эндрю Адамсоном и Вики Дженсон (в их полнометражных режиссёрских дебютах) по сценарию Теда Эллиота, Терри Россио, Джо Стиллмана и Роджера С. Х.",
+      "picture": "https://static.wikia.nocookie.net/shrek/images/9/9b/GoodShrekImage.png/revision/latest?cb=20201220080410",
+      "price": 30,
+      "trailer": "https://www.youtube.com/watch?v=HLQ1cK9Edhc",
+      "category": "Cartoons",
+      "genre": "Comedy",
       "id": 9
     },
     {
-      "title": "Action",
-      "description": "Action",
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVuJ4CaSU3OEoy-DNHt5qlYtSF5EA2eQgMazU_O0nvedVJJnrG-O4d-ksEdWPmyYTTRI&usqp=CAU",
-      "price": 100,
+      "title": "Мстители",
+      "description": "Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.",
+      "picture": "https://upload.wikimedia.org/wikipedia/ru/3/3c/The_Avengers_2012_logo.jpg",
+      "price": 40,
+      "trailer": "https://www.youtube.com/watch?v=5iw-hJ6xteE",
       "category": "Films",
       "genre": "Action",
       "id": 10
-    },
-    {
-      "title": "Thriller",
-      "description": "Thriller",
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVuJ4CaSU3OEoy-DNHt5qlYtSF5EA2eQgMazU_O0nvedVJJnrG-O4d-ksEdWPmyYTTRI&usqp=CAU",
-      "price": 777,
-      "category": "Films",
-      "genre": "Thriller",
-      "id": 11
     }
   ]
 }
