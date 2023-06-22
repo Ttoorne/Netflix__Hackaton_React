@@ -15,6 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContextProvider';
 import { ADMIN } from '../../helpers/consts';
+import { useCart } from '../../contexts/CartContextProvider';
 
 const pages = [
   { name: 'Главная', link: '/', id: 1 },
@@ -48,7 +49,9 @@ function Navbar() {
     user: { email },
   } = useAuth();
 
-  const settings = ['Профиль', 'Избранное', 'Корзина'];
+  const [count, setCount] = React.useState(0);
+
+  const { addProductToCart } = useCart();
 
   return (
     <AppBar
@@ -231,11 +234,15 @@ function Navbar() {
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}>
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Typography textAlign="center">Профиль</Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Link to="/cart">
+                  <Typography textAlign="center">Корзина</Typography>
+                </Link>
+              </MenuItem>
+
               {email ? (
                 <MenuItem
                   onClick={() => {

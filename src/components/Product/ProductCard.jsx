@@ -9,17 +9,17 @@ import { useProducts } from "../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-// import { useCart } from "../../contexts/CartContextProvider";
-// import { useAuth } from "../../contexts/AuthContextProvider";
-// import { ADMIN } from "../../helpers/consts";
+import { ADMIN } from "../../helpers/consts";
+import { useCart } from "../../contexts/CartContextProvider";
+import { useAuth } from "../../contexts/AuthContextProvider";
 
 export default function ProductCard({ item }) {
   const { deleteProduct } = useProducts();
-  //   const { addProductToCart, checkProductCart } = useCart();
+  const { addProductToCart, checkProductCart } = useCart();
   const navigate = useNavigate();
-  //   const {
-  //     user: { email },
-  //   } = useAuth();
+  const {
+    user: { email },
+  } = useAuth();
 
   return (
     <Card sx={{ maxWidth: 345, marginBottom: "15%" }}>
@@ -41,6 +41,13 @@ export default function ProductCard({ item }) {
         <Typography gutterBottom variant="p" component="div">
           {item.description}
         </Typography>
+        {item.price === 0 ? (
+          <Typography variant="p">Бесплатно</Typography>
+        ) : (
+          <Typography variant="p" sx={{ position: "end" }}>
+            Цена : {item.price}$
+          </Typography>
+        )}
       </CardContent>
       <div
         style={{
@@ -55,14 +62,15 @@ export default function ProductCard({ item }) {
           alignItems: "center",
         }}
       >
-        <Button size="small" onClick={() => deleteProduct(item.id)}>
-          Удалить
-        </Button>
-        <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
-          Редактировать
-        </Button>
-        {/* {email === ADMIN ? (
+        {email === ADMIN ? (
           <>
+            <Button size="small" onClick={() => deleteProduct(item.id)}>
+              Удалить
+            </Button>
+            <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+              Редактировать
+            </Button>
+          </>
         ) : (
           <IconButton
             sx={{
@@ -72,7 +80,7 @@ export default function ProductCard({ item }) {
           >
             <AddShoppingCartIcon />
           </IconButton>
-        )} */}
+        )}
       </CardActions>
     </Card>
   );

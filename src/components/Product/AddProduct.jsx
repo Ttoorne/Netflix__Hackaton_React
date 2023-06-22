@@ -3,6 +3,7 @@ import { Box, Button, TextField, Typography } from '@mui/material';
 import { useProducts } from '../../contexts/ProductContextProvider';
 import CategorySelect from './CategorySelect';
 import GenreSelect from './GenreSelect';
+import { useNavigate } from 'react-router-dom';
 
 const AddProduct = () => {
   const [product, setProduct] = useState({
@@ -46,6 +47,8 @@ const AddProduct = () => {
     });
   };
 
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -62,7 +65,7 @@ const AddProduct = () => {
           padding: '5% 5%',
           border: '1px solid #000',
           boxShadow: '0px 0px 7px 9px rgba(255, 1, 0, 0.5) inset',
-          borderRadius: '10px',
+          borderRadius: '20px',
           display: 'flex',
           backgroundColor: 'rgba(0, 0, 0, 0.7);',
           flexDirection: 'column',
