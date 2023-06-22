@@ -64,6 +64,9 @@ const MainRoutes = () => {
       element: <AuthPage />,
       id: 10,
     },
+  ];
+
+  const PRIVATE_ROUTES = [
     {
       link: "/edit/:id",
       element: <EditProductPage />,
@@ -75,8 +78,6 @@ const MainRoutes = () => {
       id: 2,
     },
   ];
-
-  const PRIVATE_ROUTES = [];
 
   const { user } = useAuth();
 

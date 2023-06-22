@@ -9,17 +9,17 @@ import { useProducts } from "../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { ADMIN } from "../../helpers/consts";
 // import { useCart } from "../../contexts/CartContextProvider";
-// import { useAuth } from "../../contexts/AuthContextProvider";
-// import { ADMIN } from "../../helpers/consts";
+import { useAuth } from "../../contexts/AuthContextProvider";
 
 export default function ProductCard({ item }) {
   const { deleteProduct } = useProducts();
   //   const { addProductToCart, checkProductCart } = useCart();
   const navigate = useNavigate();
-  //   const {
-  //     user: { email },
-  //   } = useAuth();
+  const {
+    user: { email },
+  } = useAuth();
 
   return (
     <Card sx={{ maxWidth: 345, marginBottom: "15%" }}>
@@ -55,12 +55,17 @@ export default function ProductCard({ item }) {
           alignItems: "center",
         }}
       >
-        <Button size="small" onClick={() => deleteProduct(item.id)}>
-          Удалить
-        </Button>
-        <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
-          Редактировать
-        </Button>
+        {email === ADMIN ? (
+          <>
+            <Button size="small" onClick={() => deleteProduct(item.id)}>
+              Удалить
+            </Button>
+            <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+              Редактировать
+            </Button>
+          </>
+        ) : null}
+
         {/* {email === ADMIN ? (
           <>
         ) : (
