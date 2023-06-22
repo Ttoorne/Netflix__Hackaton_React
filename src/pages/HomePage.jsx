@@ -1,13 +1,15 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, useMediaQuery } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import './styles/HomePage.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const maxWidth960 = useMediaQuery('(max-width:960px)');
 
   return (
     <Box
-      className="container"
+      className="container boxx"
       sx={{
         fontFamily:
           'Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif',
@@ -31,7 +33,7 @@ const HomePage = () => {
           sx={{
             fontWeight: '900',
             textAlign: 'center',
-            fontSize: '3rem',
+            fontSize: '3em',
             width: '80%',
             margin: '5% auto auto',
           }}>
@@ -42,7 +44,7 @@ const HomePage = () => {
           sx={{
             width: '80%',
             textAlign: 'center',
-            fontSize: '1.5rem',
+            fontSize: '1.5em',
             margin: '3% auto',
             fontWeight: '400',
           }}>
@@ -54,7 +56,7 @@ const HomePage = () => {
             width: '30%',
             margin: 'auto',
             padding: '1%',
-            fontSize: '1.3rem',
+            fontSize: '1.3em',
             fontWeight: '500',
             backgroundColor: 'rgb(229, 9, 20)',
             '&:hover': {
@@ -71,6 +73,7 @@ const HomePage = () => {
         className="container-mid"
         sx={{
           display: 'flex',
+          flexDirection: maxWidth960 ? 'column' : 'row',
           justifyContent: 'space-between',
           borderBottom: '10px solid rgba(35,35,35,1)',
           color: 'rgb(255, 255, 255)',
@@ -81,18 +84,20 @@ const HomePage = () => {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            width: '45%',
+            alignItems: maxWidth960 ? 'center' : '',
+            width: maxWidth960 ? '100%' : '45%',
+            textAlign: maxWidth960 ? 'center' : '',
             margin: 'auto',
           }}>
           <Typography
             variant="h2"
-            sx={{ fontSize: '3rem', fontWeight: '900', marginTop: '3%' }}>
+            sx={{ fontSize: '3em', fontWeight: '900', marginTop: '3%' }}>
             Смотрите на телевизоре
           </Typography>
           <Typography
             variant="p"
             sx={{
-              fontSize: '1.5rem',
+              fontSize: '1.5em',
               fontWeight: '400',
               marginTop: '3%',
               width: '90%',
@@ -103,12 +108,11 @@ const HomePage = () => {
         </Box>
         <Box
           className="container-mid-right"
-          sx={{ width: '35%', margin: 'auto' }}>
+          sx={{ width: maxWidth960 ? '100%' : '35%', margin: 'auto' }}>
           <img
             src="	https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
             alt=""
             width={'100%'}
-            height={'300px'}
           />
         </Box>
       </Box>
@@ -116,35 +120,38 @@ const HomePage = () => {
         className="container-third"
         sx={{
           display: 'flex',
+          flexDirection: maxWidth960 ? 'column-reverse' : 'row',
           justifyContent: 'space-between',
           borderBottom: '10px solid rgba(35,35,35,1)',
           color: 'rgb(255, 255, 255)',
           padding: '5%',
         }}>
-        <Box sx={{ width: '35%', margin: 'auto' }}>
+        <Box sx={{ width: maxWidth960 ? '100%' : '35%', margin: 'auto' }}>
           <img
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
             alt=""
             width={'100%'}
-            height={'381px'}
           />
         </Box>
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            width: '45%',
+            alignItems: maxWidth960 ? 'center' : '',
+            width: maxWidth960 ? '100%' : '45%',
+            textAlign: maxWidth960 ? 'center' : '',
             margin: 'auto',
+            marginTop: '20px',
           }}>
           <Typography
             variant="h2"
-            sx={{ fontSize: '3rem', fontWeight: '900', marginTop: '3%' }}>
+            sx={{ fontSize: '3em', fontWeight: '900', marginTop: '3%' }}>
             Загружайте сериалы для просмотра офлайн
           </Typography>
           <Typography
             variant="p"
             sx={{
-              fontSize: '1.5rem',
+              fontSize: '1.5em',
               fontWeight: '400',
               marginTop: '3%',
               width: '90%',
@@ -157,6 +164,7 @@ const HomePage = () => {
         className="container-fourth"
         sx={{
           display: 'flex',
+          flexDirection: maxWidth960 ? 'column' : 'row',
           justifyContent: 'space-between',
           borderBottom: '10px solid rgba(35,35,35,1)',
           color: 'rgb(255, 255, 255)',
@@ -166,32 +174,31 @@ const HomePage = () => {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            width: '45%',
+            width: maxWidth960 ? '100%' : '45%',
+            textAlign: maxWidth960 ? 'center' : '',
             margin: 'auto',
           }}>
           <Typography
             variant="h2"
-            sx={{ fontSize: '3rem', fontWeight: '900', marginTop: '3%' }}>
+            sx={{ fontSize: '3em', fontWeight: '900', marginTop: '3%' }}>
             Смотрите где угодно
           </Typography>
           <Typography
             variant="p"
             sx={{
-              fontSize: '1.5rem',
+              fontSize: '1.5em',
               fontWeight: '400',
               marginTop: '3%',
-              width: '90%',
             }}>
             Смотрите фильмы и сериалы на телефоне, планшете, ноутбуке и
             телевизоре.
           </Typography>
         </Box>
-        <Box sx={{ width: '40%', margin: 'auto' }}>
+        <Box sx={{ width: maxWidth960 ? '100%' : '40%', margin: 'auto' }}>
           <img
             src="	https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
             alt=""
             width={'100%'}
-            height={'381px'}
           />
         </Box>
       </Box>
@@ -200,35 +207,37 @@ const HomePage = () => {
         className="container-fifth"
         sx={{
           display: 'flex',
+          flexDirection: maxWidth960 ? 'column-reverse' : 'row',
           justifyContent: 'space-between',
           borderBottom: '10px solid rgba(35,35,35,1)',
           color: 'rgb(255, 255, 255)',
           padding: '5%',
         }}>
-        <Box sx={{ width: '35%', margin: 'auto' }}>
+        <Box sx={{ width: maxWidth960 ? '80%' : '35%', margin: 'auto' }}>
           <img
             src="https://occ-0-2774-2773.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.png?r=f55"
             alt=""
             width={'100%'}
-            height={'381px'}
           />
         </Box>
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            width: '45%',
+            textAlign: maxWidth960 ? 'center ' : '',
+            alignItems: maxWidth960 ? 'center' : '',
+            width: maxWidth960 ? '100%' : '45%',
             margin: 'auto',
           }}>
           <Typography
             variant="h2"
-            sx={{ fontSize: '3rem', fontWeight: '900', marginTop: '3%' }}>
+            sx={{ fontSize: '3em', fontWeight: '900', marginTop: '3%' }}>
             Создавайте профили для детей
           </Typography>
           <Typography
             variant="p"
             sx={{
-              fontSize: '1.5rem',
+              fontSize: '1.5em',
               fontWeight: '400',
               marginTop: '3%',
               width: '90%',

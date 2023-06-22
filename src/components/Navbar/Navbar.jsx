@@ -85,6 +85,7 @@ function Navbar() {
               width={'180px'}
               height={'100px'}
               alt=""
+              href="/"
             />
           </Typography>
 
@@ -131,7 +132,7 @@ function Navbar() {
               {email === ADMIN ? (
                 <Link to="/admin">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">ADMIN</Typography>
+                    <Typography textAlign="center">Добавить</Typography>
                   </MenuItem>
                 </Link>
               ) : null}
@@ -203,7 +204,7 @@ function Navbar() {
                       transition: '0.5s',
                     },
                   }}>
-                  ADMIN
+                  Добавить
                 </Button>
               </Link>
             ) : null}
