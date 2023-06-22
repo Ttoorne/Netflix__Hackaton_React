@@ -45,7 +45,7 @@ const ProductContextProvider = ({ children }) => {
     const { data } = await axios(`${API}${window.location.search}`);
     dispatch({ type: ACTIONS.GET_PRODUCTS, payload: data });
   };
-  
+
   //! delete request (DELETE)
   const deleteProduct = async (id) => {
     await axios.delete(`${API}/${id}`);
@@ -56,13 +56,13 @@ const ProductContextProvider = ({ children }) => {
   const getProductDetails = async (id) => {
     const { data } = await axios(`${API}/${id}`);
     dispatch({ type: ACTIONS.GET_PRODUCT_DETAILS, payload: data });
+    const updatedRecentlyWatched = state.recentlyWatched.filter(
+      (product) => product.id !== data.id
+    );
 
-    const updatedRecentlyWatched = [...state.recentlyWatched];
-    if (!updatedRecentlyWatched.includes(data)) {
-      updatedRecentlyWatched.unshift(data);
-      if (updatedRecentlyWatched.length > 2) {
-        updatedRecentlyWatched.pop();
-      }
+    updatedRecentlyWatched.unshift(data);
+    if (updatedRecentlyWatched.length > 6) {
+      updatedRecentlyWatched.pop();
     }
     dispatch({
       type: ACTIONS.ADD_TO_RECENTLY_WATCHED,

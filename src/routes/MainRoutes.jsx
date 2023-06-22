@@ -60,15 +60,14 @@ const MainRoutes = () => {
       element: <ProductPage />,
       id: 10,
     },
-  ];
-
-  const PRIVATE_ROUTES = [
     {
       link: "/edit/:id",
       element: <EditProductPage />,
       id: 5,
     },
   ];
+
+  const PRIVATE_ROUTES = [];
 
   return (
     <Routes>

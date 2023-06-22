@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import { useNavigate, useParams } from "react-router-dom";
-import { Box, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 
 const ProductDetails = () => {
   const { getProductDetails, productDetails, recentlyWatched } = useProducts();
@@ -9,11 +9,11 @@ const ProductDetails = () => {
 
   useEffect(() => {
     getProductDetails(id);
-  }, []);
+  }, [id, getProductDetails]);
 
   const navigate = useNavigate();
 
-  const MAX_RECENTLY_WATCHED = 2;
+  const MAX_RECENTLY_WATCHED = 5;
 
   const isYouTubeLink = (url) => {
     const youtubeUrlRegex =
@@ -131,6 +131,68 @@ const ProductDetails = () => {
           {getEmbeddedTrailer()}
         </Box>
       </Box>
+
+      {recentlyWatched.length > 0 && (
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexWrap: "wrap",
+            marginTop: "10%",
+          }}
+        >
+          <Typography sx={{ color: "rgb(255,255,255)" }}>
+            Недавно просмотренные
+          </Typography>
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+            }}
+          >
+            {recentlyWatched.slice(0, MAX_RECENTLY_WATCHED).map((product) => (
+              <Card
+                sx={{
+                  maxWidth: 180,
+                  border: "1px solid #ccc",
+                  margin: "auto",
+                  marginLeft: "0",
+                  marginTop: 5,
+                  cursor: "pointer",
+                }}
+                key={product.id}
+                onClick={() => navigate(`/details/${product.id}`)}
+              >
+                <CardMedia
+                  sx={{ width: 179, height: 140 }}
+                  image={product.picture}
+                  title="изображение"
+                />
+                <CardContent>
+                  <Typography
+                    sx={{
+                      fontSize: "16px",
+                      fontWeight: "600",
+                      textAlign: "center",
+                    }}
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                  >
+                    {product.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{ fontSize: "17px", textAlign: "center" }}
+                  >
+                    Цена: {product.price}$
+                  </Typography>
+                </CardContent>
+              </Card>
+            ))}
+          </Box>
+        </Box>
+      )}
     </Box>
   );
 };
