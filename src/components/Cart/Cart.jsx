@@ -3,7 +3,7 @@ import CartMain from "./CartMain";
 
 const Cart = () => {
   return (
-    <div>
+    <div style={{ width: "90%", margin: "auto" }}>
       <CartMain />
     </div>
   );

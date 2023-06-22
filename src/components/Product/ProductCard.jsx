@@ -10,12 +10,12 @@ import { useNavigate } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { ADMIN } from "../../helpers/consts";
-// import { useCart } from "../../contexts/CartContextProvider";
+import { useCart } from "../../contexts/CartContextProvider";
 import { useAuth } from "../../contexts/AuthContextProvider";
 
 export default function ProductCard({ item }) {
   const { deleteProduct } = useProducts();
-  //   const { addProductToCart, checkProductCart } = useCart();
+  const { addProductToCart, checkProductCart } = useCart();
   const navigate = useNavigate();
   const {
     user: { email },
@@ -41,6 +41,13 @@ export default function ProductCard({ item }) {
         <Typography gutterBottom variant="p" component="div">
           {item.description}
         </Typography>
+        {item.price === 0 ? (
+          <Typography variant="p">Бесплатно</Typography>
+        ) : (
+          <Typography variant="p" sx={{ position: "end" }}>
+            Цена : {item.price}$
+          </Typography>
+        )}
       </CardContent>
       <div
         style={{
@@ -64,10 +71,6 @@ export default function ProductCard({ item }) {
               Редактировать
             </Button>
           </>
-        ) : null}
-
-        {/* {email === ADMIN ? (
-          <>
         ) : (
           <IconButton
             sx={{
@@ -77,7 +80,7 @@ export default function ProductCard({ item }) {
           >
             <AddShoppingCartIcon />
           </IconButton>
-        )} */}
+        )}
       </CardActions>
     </Card>
   );

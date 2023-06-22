@@ -181,12 +181,21 @@ const ProductDetails = () => {
                   >
                     {product.title}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{ fontSize: "17px", textAlign: "center" }}
-                  >
-                    Цена: {product.price}$
-                  </Typography>
+                  {product.price === 0 ? (
+                    <Typography
+                      variant="body2"
+                      sx={{ fontSize: "14px", textAlign: "center" }}
+                    >
+                      БЕСПЛАТНО
+                    </Typography>
+                  ) : (
+                    <Typography
+                      variant="body2"
+                      sx={{ fontSize: "14px", textAlign: "center" }}
+                    >
+                      Цена: {product.price}$
+                    </Typography>
+                  )}
                 </CardContent>
               </Card>
             ))}

@@ -59,6 +59,16 @@
       "category": "Series",
       "genre": "Action",
       "id": 11
+    },
+    {
+      "title": "Breaking Bad",
+      "description": "Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.",
+      "picture": "https://resizing.flixster.com/qeGRjEC1edJQu8dLViQ1BXLeZos=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vUlRUVjYyNzkzLndlYnA=",
+      "price": 0,
+      "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY",
+      "category": "Series",
+      "genre": "Thriller",
+      "id": 12
     }
   ]
 }
