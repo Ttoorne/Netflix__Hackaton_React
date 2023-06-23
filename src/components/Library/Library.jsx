@@ -1,23 +1,22 @@
 import React from "react";
-import { useCart } from "../../contexts/CartContextProvider";
-import { Button } from "@mui/material";
+import { useLibrary } from "../../contexts/LibraryContextProvider";
 
-const CartMain = () => {
-  const { cart, getCart, changeProductCount, deleteCartProduct } = useCart();
+const Library = () => {
+  let { library, deleteLibraryProduct, getLibrary } = useLibrary();
 
   React.useEffect(() => {
-    getCart();
+    getLibrary();
   }, []);
 
   return (
     <div
-      className="cart-main"
+      className="library-main"
       style={{ width: "65%", color: "rgb(255,255,255)" }}
     >
-      {cart?.products.map((row) => (
+      {library?.products.map((row) => (
         <div
-          className="cart-card"
-          key={row.item.id}
+          className="library-card"
+          key={row.id}
           style={{
             width: "100%",
             border: "2px solid #cbcbcb",
@@ -27,15 +26,15 @@ const CartMain = () => {
             padding: "3%",
           }}
         >
-          <div className="cart-card-img" style={{ width: "30%" }}>
+          <div className="library-card-img" style={{ width: "30%" }}>
             <img
-              src={row.item.picture}
-              alt={row.item.title}
+              src={row.picture}
+              alt={row.title}
               style={{ width: "220px", height: "300px" }}
             />
           </div>
           <div
-            className="cart-card-descr"
+            className="library-card-descr"
             style={{
               width: "70%",
               display: "flex",
@@ -44,7 +43,7 @@ const CartMain = () => {
             }}
           >
             <div
-              className="card-descr-title"
+              className="library-descr-title"
               style={{
                 width: "100%",
                 fontSize: "1.3rem",
@@ -52,7 +51,7 @@ const CartMain = () => {
                 lineHeight: "1",
               }}
             >
-              <span style={{ paddingBottom: "1%" }}>{row.item.title}</span>
+              <span style={{ paddingBottom: "1%" }}>{row.title}</span>
               <hr
                 style={{
                   border: "1.5px solid #eee",
@@ -61,16 +60,19 @@ const CartMain = () => {
                 }}
               />
             </div>
-            <div className="card-descr-attributes" style={{ fontSize: "16px" }}>
+            <div
+              className="library-descr-attributes"
+              style={{ fontSize: "16px" }}
+            >
               <p style={{ paddingTop: "1%" }}>
-                <b>КАТЕГОРИЯ</b> {row.item.category}
+                <b>КАТЕГОРИЯ</b> {row.category}
               </p>
               <p style={{ paddingTop: "1%" }}>
-                <b>ЖАНР</b> {row.item.genre}
+                <b>ЖАНР</b> {row.genre}
               </p>
             </div>
             <div
-              className="card-descr-price"
+              className="library-descr-price"
               style={{
                 marginTop: "35%",
                 display: "flex",
@@ -87,31 +89,10 @@ const CartMain = () => {
                   cursor: "pointer",
                   "&hover": { color: "red", transition: "0.5s" },
                 }}
-                onClick={() => deleteCartProduct(row.item.id)}
+                onClick={() => deleteLibraryProduct(row?.id)}
               >
                 УДАЛИТЬ
               </button>
-              {row.subPrice === 0 ? (
-                <p
-                  style={{
-                    textAlign: "right",
-                    fontSize: "20px",
-                    fontWeight: "500",
-                  }}
-                >
-                  БЕСПЛАТНО
-                </p>
-              ) : (
-                <p
-                  style={{
-                    textAlign: "right",
-                    fontSize: "20px",
-                    fontWeight: "500",
-                  }}
-                >
-                  ЦЕНА {row.subPrice}$
-                </p>
-              )}
             </div>
           </div>
         </div>
@@ -120,4 +101,4 @@ const CartMain = () => {
   );
 };
 
-export default CartMain;
+export default Library;

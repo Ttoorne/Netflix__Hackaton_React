@@ -248,6 +248,11 @@ function Navbar() {
                 <Typography textAlign="center">Профиль</Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseUserMenu}>
+                <Link to="/library">
+                  <Typography textAlign="center">История покупок</Typography>
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleCloseUserMenu}>
                 <Link to="/cart">
                   <Typography textAlign="center">Корзина</Typography>
                 </Link>
