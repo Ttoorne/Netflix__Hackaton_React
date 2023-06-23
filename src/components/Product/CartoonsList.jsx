@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Box, Grid, Pagination, Typography } from "@mui/material";
-import { useProducts } from "../../contexts/ProductContextProvider";
-import { useSearchParams } from "react-router-dom";
-import ProductCard from "./ProductCard";
-import GenreSelect from "./GenreSelect";
+import React, { useEffect, useState } from 'react';
+import { Box, Grid, Pagination, Typography } from '@mui/material';
+import { useProducts } from '../../contexts/ProductContextProvider';
+import { useSearchParams } from 'react-router-dom';
+import ProductCard from './ProductCard';
+import GenreSelect from './GenreSelect';
 
 const CartoonsList = () => {
   const { getProducts, products } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
-  const [selectedGenre, setSelectedGenre] = useState("");
+  const [selectedGenre, setSelectedGenre] = useState('');
   const [page, setPage] = useState(1);
   const itemsPerPage = 9; // 3 cards per row and 3 rows
 
@@ -18,8 +18,8 @@ const CartoonsList = () => {
 
   const cartoonsProducts = products.filter(
     (item) =>
-      item.category === "Cartoons" &&
-      (selectedGenre === "" || item.genre === selectedGenre)
+      item.category === 'Cartoons' &&
+      (selectedGenre === '' || item.genre === selectedGenre)
   );
 
   const count = Math.ceil(cartoonsProducts.length / itemsPerPage);
@@ -37,22 +37,20 @@ const CartoonsList = () => {
     <Grid item md={9}>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "90%",
-          margin: "5% auto 3%",
-        }}
-      >
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: '90%',
+          margin: '5% auto 3%',
+        }}>
         <Typography
           variant="h1"
           sx={{
-            color: "rgb(255, 255, 255)",
-            fontSize: "3rem",
-            fontWeight: "400",
-            paddingRight: "3%",
-          }}
-        >
+            color: 'rgb(255, 255, 255)',
+            fontSize: '3rem',
+            fontWeight: '400',
+            paddingRight: '3%',
+          }}>
           Мультфильмы
         </Typography>
         <GenreSelect
@@ -63,46 +61,43 @@ const CartoonsList = () => {
 
       <Box
         sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "20px",
-          width: "90%",
-          margin: "auto",
-        }}
-      >
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          width: '80%',
+          margin: 'auto',
+        }}>
         {currentData.map((item) => (
           <ProductCard
             key={item.id}
             item={item}
-            sx={{ marginBottom: "20px" }}
+            sx={{ marginBottom: '20px' }}
           />
         ))}
       </Box>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          paddingBottom: "10%",
-          backgroundColor: "black",
-          color: "white",
-          "& .MuiPagination-root": {
-            "& .MuiPaginationItem-root": {
-              color: "white",
-              fontSize: "1rem",
+          display: 'flex',
+          justifyContent: 'center',
+          paddingBottom: '10%',
+          backgroundColor: 'black',
+          color: 'white',
+          '& .MuiPagination-root': {
+            '& .MuiPaginationItem-root': {
+              color: 'white',
+              fontSize: '1rem',
             },
-            "& .Mui-selected": {
-              backgroundColor: "white",
-              color: "black",
-              fontWeight: "bold",
+            '& .Mui-selected': {
+              backgroundColor: 'white',
+              color: 'black',
+              fontWeight: 'bold',
             },
-            "& .MuiPaginationItem-root:hover": {
-              backgroundColor: "black",
-              color: "#fff",
-              border: "1px solid #616161",
+            '& .MuiPaginationItem-root:hover': {
+              backgroundColor: 'black',
+              color: '#fff',
+              border: '1px solid #616161',
             },
           },
-        }}
-      >
+        }}>
         <Pagination
           count={count}
           page={page}

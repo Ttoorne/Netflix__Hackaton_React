@@ -1,14 +1,14 @@
-import { Box, Grid, Pagination, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import ProductCard from "./ProductCard";
-import { useProducts } from "../../contexts/ProductContextProvider";
-import GenreSelect from "./GenreSelect";
+import { Box, Grid, Pagination, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import ProductCard from './ProductCard';
+import { useProducts } from '../../contexts/ProductContextProvider';
+import GenreSelect from './GenreSelect';
 
 const ProductList = () => {
   const { getProducts, products } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
-  const [selectedGenre, setSelectedGenre] = useState("");
+  const [selectedGenre, setSelectedGenre] = useState('');
 
   useEffect(() => {
     getProducts();
@@ -21,7 +21,7 @@ const ProductList = () => {
   };
 
   const filteredProducts = products.filter(
-    (item) => selectedGenre === "" || item.genre === selectedGenre
+    (item) => selectedGenre === '' || item.genre === selectedGenre
   );
 
   // Pagination
@@ -44,22 +44,20 @@ const ProductList = () => {
     <Grid item md={9}>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "90%",
-          margin: "5% auto 3%",
-        }}
-      >
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: '90%',
+          margin: '5% auto 3%',
+        }}>
         <Typography
           variant="h1"
           sx={{
-            color: "rgb(255, 255, 255)",
-            fontSize: "3rem",
-            fontWeight: "400",
-            paddingRight: "3%",
-          }}
-        >
+            color: 'rgb(255, 255, 255)',
+            fontSize: '3rem',
+            fontWeight: '400',
+            paddingRight: '3%',
+          }}>
           Каталог
         </Typography>
         <GenreSelect
@@ -69,42 +67,39 @@ const ProductList = () => {
       </Box>
       <Box
         sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "20px",
-          width: "90%",
-          margin: "auto",
-        }}
-      >
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          width: '80%',
+          margin: 'auto',
+        }}>
         {currentData().map((item) => (
-          <ProductCard key={item.id} item={item} sx={{ marginBottom: "5%" }} />
+          <ProductCard key={item.id} item={item} sx={{ marginBottom: '5%' }} />
         ))}
       </Box>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          paddingBottom: "10%",
-          backgroundColor: "black",
-          color: "white",
-          "& .MuiPagination-root": {
-            "& .MuiPaginationItem-root": {
-              color: "white",
-              fontSize: "1rem",
+          display: 'flex',
+          justifyContent: 'center',
+          paddingBottom: '10%',
+          backgroundColor: 'black',
+          color: 'white',
+          '& .MuiPagination-root': {
+            '& .MuiPaginationItem-root': {
+              color: 'white',
+              fontSize: '1rem',
             },
-            "& .Mui-selected": {
-              backgroundColor: "white",
-              color: "black",
-              fontWeight: "bold",
+            '& .Mui-selected': {
+              backgroundColor: 'white',
+              color: 'black',
+              fontWeight: 'bold',
             },
-            "& .MuiPaginationItem-root:hover": {
-              backgroundColor: "black",
-              color: "#fff",
-              border: "1px solid #616161",
+            '& .MuiPaginationItem-root:hover': {
+              backgroundColor: 'black',
+              color: '#fff',
+              border: '1px solid #616161',
             },
           },
-        }}
-      >
+        }}>
         <Pagination
           count={count}
           page={page}

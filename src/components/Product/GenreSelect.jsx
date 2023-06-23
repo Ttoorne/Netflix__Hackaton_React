@@ -22,6 +22,7 @@ export default function GenreSelect({ product, setProduct }) {
           backgroundColor: '#fff',
           borderRadius: '4px',
           height: '50px',
+          width: '80%',
         }}>
         <MenuItem value="">Все жанры</MenuItem>
         <MenuItem value="Comedy">Комедия</MenuItem>

@@ -19,6 +19,8 @@ export default function CategorySelect({ product, setProduct }) {
           borderRadius: '4px',
           height: '50px',
         }}
+        labelId="demo-simple-select-label"
+        id="demo-simple-select"
         defaultValue=""
         label="Category"
         value={product.category}
