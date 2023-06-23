@@ -1,0 +1,10 @@
+@media all and (max-width: 900px) {
+  .boxx {
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 600px) {
+  .boxx {
+    font-size: 10px;
+  }
+}

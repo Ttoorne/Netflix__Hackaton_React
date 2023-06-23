@@ -1,53 +1,53 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import { Link, useSearchParams } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
-import { useAuth } from "../../contexts/AuthContextProvider";
-import { ADMIN } from "../../helpers/consts";
-import { InputBase, TextField } from "@mui/material";
-import { styled } from "@mui/system";
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import AdbIcon from '@mui/icons-material/Adb';
+import { Link, useSearchParams } from 'react-router-dom';
+import SearchIcon from '@mui/icons-material/Search';
+import { useAuth } from '../../contexts/AuthContextProvider';
+import { ADMIN } from '../../helpers/consts';
+import { InputBase, TextField } from '@mui/material';
+import { styled } from '@mui/system';
 
 const pages = [
-  { name: "Главная", link: "/", id: 1 },
-  { name: "Все", link: "/products", id: 2 },
-  { name: "Сериалы", link: "/series", id: 4 },
-  { name: "Фильмы", link: "/films", id: 8 },
-  { name: "Мультфильмы", link: "/cartoons", id: 9 },
+  { name: 'Главная', link: '/', id: 1 },
+  { name: 'Все', link: '/products', id: 2 },
+  { name: 'Сериалы', link: '/series', id: 4 },
+  { name: 'Фильмы', link: '/films', id: 8 },
+  { name: 'Мультфильмы', link: '/cartoons', id: 9 },
 ];
 
-const SearchIconWrapper = styled("div")(({ theme }) => ({
+const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
+  color: 'inherit',
+  '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      width: "12ch",
-      "&:focus": {
-        width: "20ch",
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: '12ch',
+      '&:focus': {
+        width: '20ch',
       },
     },
   },
@@ -78,7 +78,7 @@ function Navbar() {
   } = useAuth();
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const [search, setSearch] = React.useState(searchParams.get("q") || "");
+  const [search, setSearch] = React.useState(searchParams.get('q') || '');
 
   React.useEffect(() => {
     setSearchParams({ q: search });
@@ -87,20 +87,18 @@ function Navbar() {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "black", height: "100px" }}
-    >
+      sx={{ backgroundColor: 'black', height: '100px' }}>
       <Container
         maxWidth="xl"
         sx={{
-          backgroundColor: "black",
-          height: "105px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          borderBottom: "3px solid rgba(35,35,35,1)",
-        }}
-      >
-        <Toolbar disableGutters sx={{ width: "100%" }}>
+          backgroundColor: 'black',
+          height: '105px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          borderBottom: '3px solid rgba(35,35,35,1)',
+        }}>
+        <Toolbar disableGutters sx={{ width: '100%' }}>
           <Typography
             variant="h6"
             noWrap
@@ -108,61 +106,58 @@ function Navbar() {
             href="/"
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
+              display: { xs: 'none', md: 'flex' },
               fontFamily:
-                "Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif",
+                'Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif',
               fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}>
             <img
               src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
-              width={"180px"}
-              height={"100px"}
+              width={'180px'}
+              height={'100px'}
               alt=""
+              href="/"
             />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
-            >
+              color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
+                display: { xs: 'block', md: 'none' },
+              }}>
               {pages.map((page) => (
                 <Link key={page.id} to={page.link}>
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography
                       textAlign="center"
                       fontFamily={
-                        "Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif"
-                      }
-                    >
+                        'Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif'
+                      }>
                       {page.name}
                     </Typography>
                   </MenuItem>
@@ -171,13 +166,13 @@ function Navbar() {
               {email === ADMIN ? (
                 <Link to="/admin">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">ADMIN</Typography>
+                    <Typography textAlign="center">Добавить</Typography>
                   </MenuItem>
                 </Link>
               ) : null}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -185,47 +180,44 @@ function Navbar() {
             href=""
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily:
-                "Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif",
+                'Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif',
               fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}>
             <img
               src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
-              width={"170px"}
-              height={"100px"}
+              width={'170px'}
+              height={'100px'}
               alt=""
             />
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Link
                 key={page.id}
                 to={page.link}
-                style={{ textDecoration: "none" }}
-              >
+                style={{ textDecoration: 'none' }}>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{
                     my: 2,
-                    display: "block",
-                    fontSize: "16px",
-                    fontWeight: "500",
-                    color: "#cbcbcb",
-                    "&:hover": {
-                      color: "#fdfdfd",
-                      textDecoration: "none",
-                      transition: "0.5s",
+                    display: 'block',
+                    fontSize: '16px',
+                    fontWeight: '500',
+                    color: '#cbcbcb',
+                    '&:hover': {
+                      color: '#fdfdfd',
+                      textDecoration: 'none',
+                      transition: '0.5s',
                     },
                     fontFamily:
-                      "Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif",
-                  }}
-                >
+                      'Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif',
+                  }}>
                   {page.name}
                 </Button>
               </Link>
@@ -236,18 +228,17 @@ function Navbar() {
                   onClick={handleCloseNavMenu}
                   sx={{
                     my: 2,
-                    color: "white",
-                    display: "block",
-                    fontSize: "18px",
-                    color: "#cbcbcb",
-                    "&:hover": {
-                      color: "#fdfdfd",
-                      textDecoration: "none",
-                      transition: "0.5s",
+                    color: 'white',
+                    display: 'block',
+                    fontSize: '18px',
+                    color: '#cbcbcb',
+                    '&:hover': {
+                      color: '#fdfdfd',
+                      textDecoration: 'none',
+                      transition: '0.5s',
                     },
-                  }}
-                >
-                  ADMIN
+                  }}>
+                  Добавить
                 </Button>
               </Link>
             ) : null}
@@ -255,14 +246,13 @@ function Navbar() {
 
           <Box
             sx={{
-              border: "1px solid",
-              display: "flex",
-              alignItems: "center",
-              width: "300px",
-              height: "40px",
-            }}
-          >
-            <SearchIcon sx={{ marginLeft: "10px", marginRight: "10px" }} />
+              border: '1px solid',
+              display: 'flex',
+              alignItems: 'center',
+              width: '300px',
+              height: '40px',
+            }}>
+            <SearchIcon sx={{ marginLeft: '10px', marginRight: '10px' }} />
 
             <TextField
               value={search}
@@ -280,21 +270,20 @@ function Navbar() {
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: "45px" }}
+              sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
+                vertical: 'top',
+                horizontal: 'right',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
+                vertical: 'top',
+                horizontal: 'right',
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
+              onClose={handleCloseUserMenu}>
               <MenuItem onClick={handleCloseUserMenu}>
                 <Typography textAlign="center">Профиль</Typography>
               </MenuItem>
@@ -314,16 +303,14 @@ function Navbar() {
                   onClick={() => {
                     handleCloseUserMenu();
                     handleLogout();
-                  }}
-                >
+                  }}>
                   <Typography textAlign="center">Выйти</Typography>
                 </MenuItem>
               ) : (
                 <MenuItem
                   onClick={() => {
                     handleCloseUserMenu();
-                  }}
-                >
+                  }}>
                   <Link to="/auth">
                     <Typography textAlign="center">
                       Войти или зарегестрироваться
