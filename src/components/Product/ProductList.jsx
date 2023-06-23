@@ -9,6 +9,8 @@ const ProductList = () => {
   const { getProducts, products } = useProducts();
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedGenre, setSelectedGenre] = useState('');
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(0);
 
   useEffect(() => {
     getProducts();

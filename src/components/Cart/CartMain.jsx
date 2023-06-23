@@ -9,15 +9,6 @@ const CartMain = () => {
     getCart();
   }, []);
 
-  const cartCleaner = () => {
-    localStorage.removeItem("cart");
-    getCart();
-  };
-
-  const handleCountChange = (count, id) => {
-    changeProductCount(count, id);
-  };
-
   return (
     <div
       className="cart-main"
@@ -49,7 +40,7 @@ const CartMain = () => {
               width: "70%",
               display: "flex",
               flexDirection: "column",
-              padding: "2%",
+              padding: "3% 5%",
             }}
           >
             <div
@@ -61,7 +52,7 @@ const CartMain = () => {
                 lineHeight: "1",
               }}
             >
-              <span>{row.item.title}</span>
+              <span style={{ paddingBottom: "1%" }}>{row.item.title}</span>
               <hr
                 style={{
                   border: "1.5px solid #eee",
@@ -71,10 +62,10 @@ const CartMain = () => {
               />
             </div>
             <div className="card-descr-attributes" style={{ fontSize: "16px" }}>
-              <p>
+              <p style={{ paddingTop: "1%" }}>
                 <b>КАТЕГОРИЯ</b> {row.item.category}
               </p>
-              <p>
+              <p style={{ paddingTop: "1%" }}>
                 <b>ЖАНР</b> {row.item.genre}
               </p>
             </div>
@@ -118,16 +109,13 @@ const CartMain = () => {
                     fontWeight: "500",
                   }}
                 >
-                  Цена : {row.subPrice}$
+                  ЦЕНА {row.subPrice}$
                 </p>
               )}
             </div>
           </div>
         </div>
       ))}
-      <Button sx={{ marginTop: "10%" }} onClick={cartCleaner}>
-        BUY NOW FOR {cart?.totalPrice} $
-      </Button>
     </div>
   );
 };

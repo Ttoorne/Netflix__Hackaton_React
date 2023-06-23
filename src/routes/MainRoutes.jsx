@@ -13,6 +13,7 @@ import AuthPage from "../pages/AuthPage";
 import { useAuth } from "../contexts/AuthContextProvider";
 import { ADMIN } from "../helpers/consts";
 import ProductDetail from "../components/ProductDetails/ProductDetails";
+import LibraryPage from "../pages/LibraryPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -62,7 +63,12 @@ const MainRoutes = () => {
     {
       link: "/auth",
       element: <AuthPage />,
-      id: 10,
+      id: 11,
+    },
+    {
+      link: "/library",
+      element: <LibraryPage />,
+      id: 12,
     },
   ];
 
