@@ -12,10 +12,12 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import SearchIcon from "@mui/icons-material/Search";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { ADMIN } from "../../helpers/consts";
-import { useCart } from "../../contexts/CartContextProvider";
+import { InputBase, TextField } from "@mui/material";
+import { styled } from "@mui/system";
 
 const pages = [
   { name: "Главная", link: "/", id: 1 },
@@ -24,6 +26,32 @@ const pages = [
   { name: "Фильмы", link: "/films", id: 8 },
   { name: "Мультфильмы", link: "/cartoons", id: 9 },
 ];
+
+const SearchIconWrapper = styled("div")(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: "inherit",
+  "& .MuiInputBase-input": {
+    padding: theme.spacing(1, 1, 1, 0),
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      width: "12ch",
+      "&:focus": {
+        width: "20ch",
+      },
+    },
+  },
+}));
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -49,9 +77,12 @@ function Navbar() {
     user: { email },
   } = useAuth();
 
-  const [count, setCount] = React.useState(0);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = React.useState(searchParams.get("q") || "");
 
-  const { addProductToCart } = useCart();
+  React.useEffect(() => {
+    setSearchParams({ q: search });
+  }, [search]);
 
   return (
     <AppBar
@@ -220,6 +251,26 @@ function Navbar() {
                 </Button>
               </Link>
             ) : null}
+          </Box>
+
+          <Box
+            sx={{
+              border: "1px solid",
+              display: "flex",
+              alignItems: "center",
+              width: "300px",
+              height: "40px",
+            }}
+          >
+            <SearchIcon sx={{ marginLeft: "10px", marginRight: "10px" }} />
+
+            <TextField
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              fullWidth
+              label="search..."
+              variant="standard"
+            />
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
