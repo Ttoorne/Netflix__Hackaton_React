@@ -1,13 +1,22 @@
 import React from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import { Button } from "@mui/material";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import { styled } from "@mui/system";
 
 const CartMain = () => {
-  const { cart, getCart, changeProductCount, deleteCartProduct } = useCart();
+  const { cart, getCart, deleteCartProduct } = useCart();
 
   React.useEffect(() => {
     getCart();
   }, []);
+
+  const HoverableIcon = styled(RemoveCircleOutlineIcon)`
+    transition: color 0.4s;
+    &:hover {
+      color: red;
+    }
+  `;
 
   return (
     <div
@@ -26,18 +35,23 @@ const CartMain = () => {
           key={row.item.id}
           style={{
             width: "100%",
-            border: "2px solid #cbcbcb",
+            border: "5px solid #cbcbcb",
             margin: "5% 0",
             borderRadius: "10px",
             display: "flex",
             padding: "3%",
+            backdropFilter: "blur(10px)",
           }}
         >
           <div className="cart-card-img" style={{ width: "30%" }}>
             <img
               src={row.item.picture}
               alt={row.item.title}
-              style={{ width: "220px", height: "300px" }}
+              style={{
+                width: "220px",
+                height: "300px",
+                border: "2px solid #cbcbcb",
+              }}
             />
           </div>
           <div
@@ -78,29 +92,15 @@ const CartMain = () => {
             <div
               className="card-descr-price"
               style={{
-                marginTop: "35%",
+                marginTop: "37%",
                 display: "flex",
                 justifyContent: "space-between",
               }}
             >
-              <button
-                style={{
-                  fontSize: "1rem",
-                  fontWeight: "800",
-                  border: "none",
-                  backgroundColor: "black",
-                  color: "rgb(255,255,255)",
-                  cursor: "pointer",
-                  "&hover": { color: "red", transition: "0.5s" },
-                }}
-                onClick={() => deleteCartProduct(row.item.id)}
-              >
-                УДАЛИТЬ
-              </button>
               {row.subPrice === 0 ? (
                 <p
                   style={{
-                    textAlign: "right",
+                    textAlign: "left",
                     fontSize: "20px",
                     fontWeight: "500",
                   }}
@@ -110,7 +110,7 @@ const CartMain = () => {
               ) : (
                 <p
                   style={{
-                    textAlign: "right",
+                    textAlign: "left",
                     fontSize: "20px",
                     fontWeight: "500",
                   }}
@@ -118,6 +118,20 @@ const CartMain = () => {
                   ЦЕНА {row.subPrice}$
                 </p>
               )}
+              <button
+                style={{
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                  border: "none",
+                  backgroundColor: "transparent",
+                  color: "rgb(255,255,255)",
+                  cursor: "pointer",
+                  "&:hover": { color: "red", transition: "0.5s" },
+                }}
+                onClick={() => deleteCartProduct(row.item.id)}
+              >
+                <HoverableIcon fontSize="large" />
+              </button>
             </div>
           </div>
         </div>

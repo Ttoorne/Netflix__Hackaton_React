@@ -39,9 +39,23 @@ const Cart = () => {
   }
 
   return (
-    <div style={{ width: "90%", margin: "auto", display: "flex" }}>
-      <CartMain />
-      <CartPay />
+    <div
+      style={{
+        width: "100%",
+        backgroundImage:
+          "url('https://assets.nflxext.com/ffe/siteui/vlv3/39f3c979-c105-4948-9c51-611eedf3a6fd/cbcb1617-1a2b-46ce-96ef-768e2a9c591f/KG-ru-20230612-popsignuptwoweeks-perspective_alpha_website_medium.jpg')",
+      }}
+    >
+      <div
+        style={{
+          width: "90%",
+          margin: "auto",
+          display: "flex",
+        }}
+      >
+        <CartMain />
+        <CartPay />
+      </div>
     </div>
   );
 };

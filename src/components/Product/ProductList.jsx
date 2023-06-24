@@ -48,7 +48,7 @@ const ProductList = () => {
       md={9}
       sx={{
         backgroundImage:
-          "url('https://assets.nflxext.com/ffe/siteui/vlv3/39f3c979-c105-4948-9c51-611eedf3a6fd/cbcb1617-1a2b-46ce-96ef-768e2a9c591f/KG-ru-20230612-popsignuptwoweeks-perspective_alpha_website_medium.jpg')",
+          "url('https://assets.nflxext.com/ffe/siteui/vlv3/530fc327-2ddb-4038-a3f0-2da2d9ccede1/e39f2247-f332-4591-9e9d-f4cd8fc45104/KG-ru-20230619-popsignuptwoweeks-perspective_alpha_website_medium.jpg')",
         padding: "1% 0 0",
       }}
     >

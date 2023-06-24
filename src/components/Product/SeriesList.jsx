@@ -34,7 +34,15 @@ const SeriesList = () => {
   );
 
   return (
-    <Grid item md={9}>
+    <Grid
+      item
+      md={9}
+      sx={{
+        backgroundImage:
+          "url('https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/netflixteaser.png')",
+        padding: "1% 0 0",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -65,24 +73,19 @@ const SeriesList = () => {
         sx={{
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
-          justifyContent: "space-between",
           width: "90%",
           margin: "auto",
         }}
       >
         {currentData.map((item) => (
-          <ProductCard
-            key={item.id}
-            item={item}
-            sx={{ marginBottom: "20px" }}
-          />
+          <ProductCard key={item.id} item={item} sx={{ marginBottom: "5%" }} />
         ))}
       </Box>
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
-          paddingBottom: "10%",
+          padding: "3% 0 5%",
           backgroundColor: "black",
           color: "white",
           "& .MuiPagination-root": {
@@ -104,6 +107,7 @@ const SeriesList = () => {
         }}
       >
         <Pagination
+          sx={{ marginBottom: "-3%" }}
           count={count}
           page={page}
           onChange={handleChange}

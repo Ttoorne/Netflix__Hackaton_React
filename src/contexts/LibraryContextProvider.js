@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useEffect, useReducer } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import { ACTIONS } from "../helpers/consts";
 
 export const libraryContext = createContext();
@@ -40,6 +46,8 @@ const LibraryContextProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("library", JSON.stringify(state.library));
   }, [state.library]);
+
+  const [showAlert, setShowAlert] = useState(false);
 
   const addLibraryProduct = (product) => {
     let library = JSON.parse(localStorage.getItem("library"));

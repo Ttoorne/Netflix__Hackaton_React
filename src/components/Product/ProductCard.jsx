@@ -113,49 +113,49 @@ export default function ProductCard({ item }) {
             </Button>
           </>
         ) : null}
-        <div
-          style={{
-            width: "95%",
-            margin: "auto",
-            display: "flex",
-            justifyContent: "end",
-          }}
-        >
-          <button
+        {email !== ADMIN && email ? (
+          <div
             style={{
-              color: "rgb(255,255,255)",
-              fontSize: "17px",
-              fontWeight: "600",
-              padding: "0 5%",
-              backgroundColor: "black",
-              border: "1px solid rgba(35,35,35,1)",
-              borderRadius: "10px 0px 0px 10px",
+              width: "95%",
+              margin: "auto",
+              display: "flex",
+              justifyContent: "end",
             }}
           >
-            {item.price === 0 ? (
-              <Typography variant="p">Бесплатно</Typography>
-            ) : (
-              <Typography variant="p" sx={{ position: "end" }}>
-                {item.price}$
-              </Typography>
-            )}
-          </button>
-          <Button
-            sx={{
-              color: "rgb(255,255,255)",
-              fontSize: "17px",
-              fontWeight: "600",
-              padding: "0 1%",
-              "&:hover": {
-                backgroundColor: checkProductCart(item.id)
-                  ? "black"
-                  : "rgba(35,35,35,1)",
-              },
-              border: "1px solid rgba(35,35,35,1)",
-              borderRadius: "0px 10px 10px 0px",
-            }}
-          >
-            {email ? (
+            <button
+              style={{
+                color: "rgb(255,255,255)",
+                fontSize: "17px",
+                fontWeight: "600",
+                padding: "0 5%",
+                backgroundColor: "black",
+                border: "1px solid rgba(35,35,35,1)",
+                borderRadius: "10px 0px 0px 10px",
+              }}
+            >
+              {item.price === 0 ? (
+                <Typography variant="p">Бесплатно</Typography>
+              ) : (
+                <Typography variant="p" sx={{ position: "end" }}>
+                  {item.price}$
+                </Typography>
+              )}
+            </button>
+            <Button
+              sx={{
+                color: "rgb(255,255,255)",
+                fontSize: "17px",
+                fontWeight: "600",
+                padding: "0 1%",
+                "&:hover": {
+                  backgroundColor: checkProductCart(item.id)
+                    ? "black"
+                    : "rgba(35,35,35,1)",
+                },
+                border: "1px solid rgba(35,35,35,1)",
+                borderRadius: "0px 10px 10px 0px",
+              }}
+            >
               <IconButton
                 sx={{
                   color: checkProductCart(item.id)
@@ -166,9 +166,9 @@ export default function ProductCard({ item }) {
               >
                 <AddShoppingCartIcon />
               </IconButton>
-            ) : null}
-          </Button>
-        </div>
+            </Button>
+          </div>
+        ) : null}
       </CardActions>
     </Card>
   );

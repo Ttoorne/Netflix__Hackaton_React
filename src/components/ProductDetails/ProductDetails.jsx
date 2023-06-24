@@ -12,12 +12,17 @@ import {
 } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useCart } from "../../contexts/CartContextProvider";
+import { useAuth } from "../../contexts/AuthContextProvider";
 
 const ProductDetails = () => {
   const { getProductDetails, productDetails, recentlyWatched } = useProducts();
   const { addProductToCart, showAlert, setShowAlert, checkProductCart } =
     useCart();
   const { id } = useParams();
+
+  const {
+    user: { email },
+  } = useAuth();
 
   useEffect(() => {
     getProductDetails(id);
@@ -112,16 +117,16 @@ const ProductDetails = () => {
               height: 300,
               width: "100%",
               marginTop: "5%",
+              border: "2px solid rgba(35,35,35,1)",
+              borderRadius: "4px",
+              boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
             }}
             image={productDetails?.picture}
             title="green iguana"
           />
         </Box>
 
-        <Box
-          className="product-info-main"
-          sx={{ width: "60%", marginTop: "5%" }}
-        >
+        <Box className="product-info-main" sx={{ width: "60%" }}>
           <CardContent
             sx={{
               display: "flex",
@@ -141,9 +146,19 @@ const ProductDetails = () => {
                 variant="h4"
                 component="h2"
                 gutterBottom
-                sx={{ color: "#fff", fontWeight: "bold", fontSize: "2em" }}
+                sx={{
+                  color: "#fff",
+                  fontWeight: "800",
+                  fontSize: "2em",
+                }}
               >
                 {productDetails?.title}
+                <hr
+                  style={{
+                    borderBottom: "1px solid rgba(35,35,35,1)",
+                    marginTop: "1%",
+                  }}
+                />
               </Typography>
               <Typography
                 variant="body1"
@@ -176,17 +191,18 @@ const ProductDetails = () => {
                     Уже в корзине
                   </Typography>
                 </Box>
-              ) : (
+              ) : email ? (
                 <Box
                   sx={{
                     display: "flex",
                     width: "100%",
                     alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   <Button
                     sx={{
-                      width: "60%",
+                      width: "50%",
                       fontSize: "18px",
                       borderRadius: "10px 0px 0px 10px",
                     }}
@@ -198,21 +214,39 @@ const ProductDetails = () => {
                   >
                     Добавить в корзину
                   </Button>
-                  <Button
-                    sx={{
-                      width: "20%",
-                      fontSize: "18px",
-                      borderRadius: "0px 10px 10px 0px",
-                    }}
-                    color="error"
-                    size="big"
-                    onClick={() => addProductToCart(productDetails)}
-                    variant="contained"
-                  >
-                    {productDetails?.price}$
-                  </Button>
+                  {productDetails?.price > 0 ? (
+                    <Button
+                      sx={{
+                        width: "10%",
+                        fontWeight: "600",
+                        fontSize: "18px",
+                        borderRadius: "0px 10px 10px 0px",
+                      }}
+                      color="error"
+                      size="big"
+                      onClick={() => addProductToCart(productDetails)}
+                      variant="contained"
+                    >
+                      {productDetails?.price}$
+                    </Button>
+                  ) : (
+                    <Button
+                      sx={{
+                        width: "30%",
+                        fontWeight: "500",
+                        fontSize: "18px",
+                        borderRadius: "0px 10px 10px 0px",
+                      }}
+                      color="error"
+                      size="big"
+                      onClick={() => addProductToCart(productDetails)}
+                      variant="contained"
+                    >
+                      БЕСПЛАТНО
+                    </Button>
+                  )}
                 </Box>
-              )}
+              ) : null}
             </Box>
             <Box sx={{ display: "flex", justifyContent: "flex-end" }}></Box>
           </CardContent>
@@ -220,7 +254,10 @@ const ProductDetails = () => {
 
         <Box
           className="product-info-trailer"
-          sx={{ marginTop: "5%", width: "100%" }}
+          sx={{
+            marginTop: "5%",
+            width: "100%",
+          }}
         >
           {getEmbeddedTrailer()}
         </Box>
@@ -248,11 +285,10 @@ const ProductDetails = () => {
               <Card
                 sx={{
                   width: 180,
-                  height: 300,
+                  height: 260,
                   border: "1px solid #ccc",
                   backgroundColor: "transparent",
                   color: "white",
-                  boxShadow: "0px 0px 8px 3px rgba(255, 1, 0, 0.5) inset",
                   borderRadius: "10px",
                   margin: "auto",
                   marginLeft: "0",
@@ -263,7 +299,7 @@ const ProductDetails = () => {
                 onClick={() => navigate(`/details/${product.id}`)}
               >
                 <CardMedia
-                  sx={{ width: 180, height: 140 }}
+                  sx={{ width: 180, height: 200 }}
                   image={product.picture}
                   title="изображение"
                 />
@@ -271,7 +307,7 @@ const ProductDetails = () => {
                   <Typography
                     sx={{
                       fontSize: "16px",
-                      fontWeight: "600",
+                      fontWeight: "800",
                       textAlign: "center",
                     }}
                     gutterBottom
@@ -280,21 +316,6 @@ const ProductDetails = () => {
                   >
                     {product.title}
                   </Typography>
-                  {product.price === 0 ? (
-                    <Typography
-                      variant="body2"
-                      sx={{ fontSize: "14px", textAlign: "center" }}
-                    >
-                      БЕСПЛАТНО
-                    </Typography>
-                  ) : (
-                    <Typography
-                      variant="body2"
-                      sx={{ fontSize: "14px", textAlign: "center" }}
-                    >
-                      Цена: {product.price}$
-                    </Typography>
-                  )}
                 </CardContent>
               </Card>
             ))}

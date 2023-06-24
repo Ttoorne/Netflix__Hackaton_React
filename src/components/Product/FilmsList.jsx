@@ -34,7 +34,15 @@ const FilmsList = () => {
   );
 
   return (
-    <Grid item md={9}>
+    <Grid
+      item
+      md={9}
+      sx={{
+        backgroundImage:
+          "url('https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg')",
+        padding: "1% 0 0",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -71,18 +79,14 @@ const FilmsList = () => {
         }}
       >
         {currentData.map((item) => (
-          <ProductCard
-            key={item.id}
-            item={item}
-            sx={{ marginBottom: "20px" }}
-          />
+          <ProductCard key={item.id} item={item} sx={{ marginBottom: "5%" }} />
         ))}
       </Box>
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
-          paddingBottom: "10%",
+          padding: "3% 0 5%",
           backgroundColor: "black",
           color: "white",
           "& .MuiPagination-root": {
@@ -104,6 +108,7 @@ const FilmsList = () => {
         }}
       >
         <Pagination
+          sx={{ marginBottom: "-3%" }}
           count={count}
           page={page}
           onChange={handleChange}
