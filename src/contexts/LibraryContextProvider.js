@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useContext, useEffect, useReducer } from "react";
 import { ACTIONS } from "../helpers/consts";
 
 export const libraryContext = createContext();
@@ -23,13 +23,30 @@ const LibraryContextProvider = ({ children }) => {
 
   const getLibrary = () => {
     let library = JSON.parse(localStorage.getItem("library"));
+    if (!library) {
+      localStorage.setItem(
+        "library",
+        JSON.stringify({
+          products: [],
+        })
+      );
+      library = {
+        products: [],
+      };
+    }
     dispatch({ type: ACTIONS.GET_LIBRARY, payload: library });
   };
+
+  useEffect(() => {
+    localStorage.setItem("library", JSON.stringify(state.library));
+  }, [state.library]);
 
   const addLibraryProduct = (product) => {
     let library = JSON.parse(localStorage.getItem("library"));
     if (!library) {
-      library = { products: [] };
+      library = {
+        products: [],
+      };
     }
     library.products.push(product);
     localStorage.setItem("library", JSON.stringify(library));

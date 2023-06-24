@@ -4,10 +4,11 @@ import { useLibrary } from "../../contexts/LibraryContextProvider";
 
 const CartPay = () => {
   const { cart, getCart } = useCart();
-  const { addLibraryProduct } = useLibrary();
+  const { library, addLibraryProduct, getLibrary } = useLibrary();
 
   const cartCleaner = () => {
     const cartData = JSON.parse(localStorage.getItem("cart"));
+
     const libraryData = JSON.parse(localStorage.getItem("library"));
 
     if (libraryData && cartData && cartData.products.length > 0) {
@@ -24,23 +25,9 @@ const CartPay = () => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  if (!cart || cart.totalPrice === 0) {
-    return (
-      <div
-        style={{
-          color: "rgb(255,255,255)",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "50vh",
-        }}
-      >
-        <h1 style={{ position: "absolute", left: "35%", fontSize: "44px" }}>
-          Ваша корзина пуста!
-        </h1>
-      </div>
-    );
-  }
+  useEffect(() => {
+    getLibrary(); // Вызов функции getLibrary при монтировании компонента
+  }, []);
 
   return (
     <div

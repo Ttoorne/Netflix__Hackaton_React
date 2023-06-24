@@ -14,6 +14,12 @@ const CartMain = () => {
       className="cart-main"
       style={{ width: "65%", color: "rgb(255,255,255)" }}
     >
+      {cart?.products.length > 0 ? (
+        <h2 style={{ fontSize: "32px", fontWeight: "800", marginTop: "5%" }}>
+          Корзина({cart?.products.length})
+        </h2>
+      ) : null}
+
       {cart?.products.map((row) => (
         <div
           className="cart-card"
