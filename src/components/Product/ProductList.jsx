@@ -43,11 +43,18 @@ const ProductList = () => {
   // Pagination
 
   return (
-    <Grid item md={9}>
+    <Grid
+      item
+      md={9}
+      sx={{
+        backgroundImage:
+          "url('https://assets.nflxext.com/ffe/siteui/vlv3/39f3c979-c105-4948-9c51-611eedf3a6fd/cbcb1617-1a2b-46ce-96ef-768e2a9c591f/KG-ru-20230612-popsignuptwoweeks-perspective_alpha_website_medium.jpg')",
+        padding: "1% 0 0",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-between",
           alignItems: "center",
           width: "90%",
           margin: "5% auto 3%",
@@ -64,10 +71,12 @@ const ProductList = () => {
         >
           Каталог
         </Typography>
-        <GenreSelect
-          product={{ genre: selectedGenre }}
-          setProduct={(product) => setSelectedGenre(product.genre)}
-        />
+        <Box sx={{ width: "15%" }}>
+          <GenreSelect
+            product={{ genre: selectedGenre }}
+            setProduct={(product) => setSelectedGenre(product.genre)}
+          />
+        </Box>
       </Box>
       <Box
         sx={{
@@ -85,7 +94,7 @@ const ProductList = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          paddingBottom: "10%",
+          padding: "3% 0 5%",
           backgroundColor: "black",
           color: "white",
           "& .MuiPagination-root": {
@@ -107,6 +116,7 @@ const ProductList = () => {
         }}
       >
         <Pagination
+          sx={{ marginBottom: "-3%" }}
           count={count}
           page={page}
           onChange={handleChange}
