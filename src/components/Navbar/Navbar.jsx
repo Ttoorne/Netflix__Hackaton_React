@@ -20,6 +20,7 @@ import { InputBase, TextField } from "@mui/material";
 import { styled } from "@mui/system";
 import { useLibrary } from "../../contexts/LibraryContextProvider";
 import { useCart } from "../../contexts/CartContextProvider";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const pages = [
   { name: "Главная", link: "/", id: 1 },
@@ -266,17 +267,35 @@ function Navbar() {
               border: "1px solid",
               display: "flex",
               alignItems: "center",
-              width: "300px",
+              width: "250px",
               height: "40px",
+              borderRadius: "10px",
+              border: "1px solid rgba(35,35,35,1)",
+              marginRight: "2%",
+              padding: "0 1%",
             }}
           >
-            <SearchIcon sx={{ marginLeft: "10px", marginRight: "10px" }} />
+            <SearchIcon sx={{ marginRight: "10px" }} />
 
             <TextField
               value={search}
+              sx={{
+                "& input": {
+                  color: "rgb(255,255,255)",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "#e50914",
+                },
+              }}
+              label={""}
+              InputLabelProps={{
+                style: {
+                  color: "rgb(255,255,255)",
+                },
+              }}
+              placeholder="Поиск"
               onChange={(e) => setSearch(e.target.value)}
               fullWidth
-              label="search..."
               variant="standard"
             />
           </Box>
@@ -284,7 +303,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt={email} src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -307,31 +326,32 @@ function Navbar() {
                 <MenuItem onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">Привет, {email}!</Typography>
                 </MenuItem>
-              ) : (
-                <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">Профиль</Typography>
-                </MenuItem>
-              )}
-              <Link to="/library">
-                <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">
-                    {"Библиотека "}
-                    {library?.products.length > 0
-                      ? `(${library?.products.length})`
-                      : null}
-                  </Typography>
-                </MenuItem>
-              </Link>
-              <Link to="/cart">
-                <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">
-                    {"Корзина "}
-                    {cart?.products.length > 0
-                      ? `(${cart?.products.length})`
-                      : null}
-                  </Typography>
-                </MenuItem>
-              </Link>
+              ) : null}
+              {email ? (
+                <Link to="/library">
+                  <MenuItem onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">
+                      {"Библиотека "}
+                      {library?.products.length > 0
+                        ? `(${library?.products.length})`
+                        : null}
+                    </Typography>
+                  </MenuItem>
+                </Link>
+              ) : null}
+              {email ? (
+                <Link to="/cart">
+                  <MenuItem onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">
+                      {"Корзина "}
+                      {cart?.products.length > 0
+                        ? `(${cart?.products.length})`
+                        : null}
+                    </Typography>
+                  </MenuItem>
+                </Link>
+              ) : null}
+
               {email ? (
                 <MenuItem
                   onClick={() => {

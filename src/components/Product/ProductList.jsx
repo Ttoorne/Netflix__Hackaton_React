@@ -73,7 +73,7 @@ const ProductList = () => {
         sx={{
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
-          width: "80%",
+          width: "90%",
           margin: "auto",
         }}
       >
