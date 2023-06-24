@@ -316,7 +316,7 @@ const HomePage = () => {
         sx={{
           borderBottom: "7px solid rgba(35,35,35,1)",
           color: "rgb(255, 255, 255)",
-          padding: "5%",
+          padding: "0 3% 5%",
           width: "100%",
           display: "flex",
           justifyContent: "center",
