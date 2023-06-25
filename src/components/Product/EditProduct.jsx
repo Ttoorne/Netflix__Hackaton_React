@@ -53,38 +53,42 @@ const EditProduct = () => {
     <Box
       sx={{
         paddingBottom: "3%",
+        color: "rgb(255, 255, 255)",
+        paddingTop: "100px",
+        backgroundImage:
+          "url('https://assets.nflxext.com/ffe/siteui/vlv3/39f3c979-c105-4948-9c51-611eedf3a6fd/cbcb1617-1a2b-46ce-96ef-768e2a9c591f/KG-ru-20230612-popsignuptwoweeks-perspective_alpha_website_medium.jpg')",
       }}
     >
-      <Typography
-        sx={{
-          paddingTop: "2%",
-          color: "white",
-          WebkitTextStroke: "3px black",
-          fontWeight: "900",
-          fontSize: "44px",
-        }}
-        variant="h4"
-        align="center"
-      >
-        Редактировать
-      </Typography>
       <Box
         sx={{
-          width: "60vw",
-          margin: "10px auto",
+          width: "45%",
+          margin: " auto",
           padding: "5% 5%",
-          boxShadow: "0px 0px 21px 15px rgb(229, 9, 20)",
-          borderRadius: "10px",
+          border: "1px solid #000",
+          boxShadow: "0px 0px 7px 9px rgba(255, 1, 0, 0.5) inset",
+          borderRadius: "20px",
           display: "flex",
+          backgroundColor: "rgba(0, 0, 0, 0.7);",
           flexDirection: "column",
         }}
       >
+        <Typography
+          sx={{
+            margin: "5% 0",
+            fontWeight: "900",
+            fontSize: "3rem",
+            marginBottom: "50px",
+          }}
+          variant="h4"
+          align="center"
+        >
+          Редактировать
+        </Typography>
         <TextField
           sx={{
-            backgroundColor: "white",
+            backgroundColor: "#fff",
             borderRadius: "5px",
             marginBottom: "20px",
-            boxShadow: "0px 0px 7px 9px rgba(255, 67, 0, 0.2) inset",
             textAlign: "center",
             fontSize: "1rem",
           }}
@@ -100,7 +104,6 @@ const EditProduct = () => {
             backgroundColor: "white",
             borderRadius: "5px",
             marginBottom: "20px",
-            boxShadow: "0px 0px 7px 9px rgba(255, 67, 0, 0.2) inset",
           }}
           fullWidth
           onChange={handleInp}
@@ -114,7 +117,6 @@ const EditProduct = () => {
             backgroundColor: "white",
             borderRadius: "5px",
             marginBottom: "20px",
-            boxShadow: "0px 0px 7px 9px rgba(255, 67, 0, 0.2) inset",
           }}
           fullWidth
           onChange={handleInp}
@@ -128,7 +130,6 @@ const EditProduct = () => {
             backgroundColor: "white",
             borderRadius: "5px",
             marginBottom: "20px",
-            boxShadow: "0px 0px 7px 9px rgba(255, 67, 0, 0.2) inset",
           }}
           fullWidth
           onChange={handleInp}
@@ -142,7 +143,6 @@ const EditProduct = () => {
             backgroundColor: "white",
             borderRadius: "5px",
             marginBottom: "20px",
-            boxShadow: "0px 0px 7px 9px rgba(255, 67, 0, 0.2) inset",
           }}
           fullWidth
           onChange={handleInp}
@@ -153,36 +153,40 @@ const EditProduct = () => {
         />
         <Box
           sx={{
-            backgroundColor: "white",
-            borderRadius: "5px",
-            marginBottom: "10px",
-          }}
-        >
-          <CategorySelect product={product} setProduct={setProduct} />
-        </Box>
-        <Box
-          sx={{
-            borderRadius: "5px",
-            marginBottom: "10px",
+            width: "100%",
             display: "flex",
-            justifyContent: "center",
-            padding: "2% 0",
+            justifyContent: "space-between",
+            margin: "20px 0px",
           }}
         >
-          <GenreSelect product={product} setProduct={setProduct} />
+          <GenreSelect
+            sx={{ width: "40%" }}
+            product={product}
+            setProduct={setProduct}
+          />
+
+          <CategorySelect
+            sx={{ width: "40%" }}
+            product={product}
+            setProduct={setProduct}
+          />
         </Box>
-        <Box sx={{ backgroundColor: "orange", borderRadius: "5px" }}>
+
+        <Box>
           <Button
             sx={{
-              backgroundColor: "white",
+              backgroundColor: "red",
               borderRadius: "5px",
-              color: "black",
+              color: "rgb(255,255,255)",
               fontSize: "22px",
               fontWeight: "900",
               fontFamily: "segoe ui",
+              border: "none",
               "&:hover": {
-                backgroundColor: "black",
+                backgroundColor: "red",
+                filter: "brightness(90%)",
                 color: "white",
+                border: "none",
               },
             }}
             onClick={() => saveEditedProduct(product)}
