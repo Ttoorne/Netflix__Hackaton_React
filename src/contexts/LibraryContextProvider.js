@@ -47,8 +47,6 @@ const LibraryContextProvider = ({ children }) => {
     localStorage.setItem("library", JSON.stringify(state.library));
   }, [state.library]);
 
-  const [showAlert, setShowAlert] = useState(false);
-
   const addLibraryProduct = (product) => {
     let library = JSON.parse(localStorage.getItem("library"));
     if (!library) {
@@ -59,6 +57,15 @@ const LibraryContextProvider = ({ children }) => {
     library.products.push(product);
     localStorage.setItem("library", JSON.stringify(library));
     dispatch({ type: ACTIONS.GET_LIBRARY, payload: library });
+  };
+
+  const checkProductLibrary = (id) => {
+    let library = JSON.parse(localStorage.getItem("library"));
+
+    if (library) {
+      let newLib = library.products.filter((elem) => elem.id === id);
+      return newLib.length > 0 ? true : false;
+    }
   };
 
   const deleteLibraryProduct = (id) => {
@@ -73,6 +80,7 @@ const LibraryContextProvider = ({ children }) => {
     library: state.library,
     deleteLibraryProduct,
     addLibraryProduct,
+    checkProductLibrary,
   };
 
   return (

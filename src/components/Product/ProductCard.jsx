@@ -14,11 +14,16 @@ import { useCart } from "../../contexts/CartContextProvider";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { useLibrary } from "../../contexts/LibraryContextProvider";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 
 export default function ProductCard({ item }) {
   const { deleteProduct } = useProducts();
   const { addProductToCart, checkProductCart } = useCart();
+  const { checkProductLibrary } = useLibrary();
   const navigate = useNavigate();
+
   const {
     user: { email },
   } = useAuth();
@@ -119,54 +124,67 @@ export default function ProductCard({ item }) {
               width: "95%",
               margin: "auto",
               display: "flex",
-              justifyContent: "end",
+              justifyContent: "space-between",
             }}
           >
-            <button
-              style={{
-                color: "rgb(255,255,255)",
-                fontSize: "17px",
-                fontWeight: "600",
-                padding: "0 5%",
-                backgroundColor: "black",
-                border: "1px solid rgba(35,35,35,1)",
-                borderRadius: "10px 0px 0px 10px",
-              }}
-            >
-              {item.price === 0 ? (
-                <Typography variant="p">Бесплатно</Typography>
-              ) : (
-                <Typography variant="p" sx={{ position: "end" }}>
-                  {item.price}$
-                </Typography>
-              )}
-            </button>
-            <Button
-              sx={{
-                color: "rgb(255,255,255)",
-                fontSize: "17px",
-                fontWeight: "600",
-                padding: "0 1%",
-                "&:hover": {
-                  backgroundColor: checkProductCart(item.id)
-                    ? "black"
-                    : "rgba(35,35,35,1)",
-                },
-                border: "1px solid rgba(35,35,35,1)",
-                borderRadius: "0px 10px 10px 0px",
-              }}
-            >
-              <IconButton
-                sx={{
-                  color: checkProductCart(item.id)
-                    ? "rgba(35,35,35,1)"
-                    : "inherit",
+            {checkProductLibrary(item.id) ? (
+              <div title="Уже в библиотеке">
+                <BookmarkIcon sx={{ color: "yellow" }} fontSize="large" />
+              </div>
+            ) : (
+              <div title="Не куплено">
+                <BookmarkBorderIcon fontSize="large" />
+              </div>
+            )}
+            <div style={{ display: "flex", marginRight: "5%" }}>
+              <button
+                style={{
+                  color: "rgb(255,255,255)",
+                  fontSize: "17px",
+                  fontWeight: "600",
+                  padding: "0 7%",
+                  backgroundColor: "black",
+                  border: "1px solid rgba(35,35,35,1)",
+                  borderRadius: "10px 0px 0px 10px",
                 }}
-                onClick={() => addProductToCart(item)}
               >
-                <AddShoppingCartIcon />
-              </IconButton>
-            </Button>
+                {item.price === 0 ? (
+                  <Typography variant="p">Бесплатно</Typography>
+                ) : (
+                  <Typography variant="p" sx={{ position: "end" }}>
+                    {item.price}$
+                  </Typography>
+                )}
+              </button>
+              <Button
+                sx={{
+                  color: "rgb(255,255,255)",
+                  fontSize: "17px",
+                  fontWeight: "600",
+                  padding: "0 1%",
+                  "&:hover": {
+                    backgroundColor: checkProductCart(item.id)
+                      ? "black"
+                      : "rgba(35,35,35,1)",
+                  },
+                  border: "1px solid rgba(35,35,35,1)",
+                  borderRadius: "0px 10px 10px 0px",
+                }}
+                title="Добавить в корзину"
+              >
+                <IconButton
+                  sx={{
+                    color:
+                      checkProductCart(item.id) || checkProductLibrary(item.id)
+                        ? "rgba(35,35,35,1)"
+                        : "inherit",
+                  }}
+                  onClick={() => addProductToCart(item)}
+                >
+                  <AddShoppingCartIcon />
+                </IconButton>
+              </Button>
+            </div>
           </div>
         ) : null}
       </CardActions>

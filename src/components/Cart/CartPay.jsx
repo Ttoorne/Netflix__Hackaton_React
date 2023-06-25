@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import { useLibrary } from "../../contexts/LibraryContextProvider";
 import { Link } from "react-router-dom";
@@ -7,9 +7,18 @@ const CartPay = () => {
   const { cart, getCart } = useCart();
   const { library, addLibraryProduct, getLibrary } = useLibrary();
 
+  const [formFields, setFormFields] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    cardNumber: "",
+    expirationDate: "",
+    cvv: "",
+    agreementChecked: false,
+  });
+
   const cartCleaner = () => {
     const cartData = JSON.parse(localStorage.getItem("cart"));
-
     const libraryData = JSON.parse(localStorage.getItem("library"));
 
     if (libraryData && cartData && cartData.products.length > 0) {
@@ -29,6 +38,43 @@ const CartPay = () => {
   useEffect(() => {
     getLibrary();
   }, []);
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormFields((prevFields) => ({
+      ...prevFields,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const isFormValid = () => {
+    const {
+      name,
+      surname,
+      email,
+      cardNumber,
+      expirationDate,
+      cvv,
+      agreementChecked,
+    } = formFields;
+    return (
+      name !== "" &&
+      surname !== "" &&
+      email !== "" &&
+      cardNumber !== "" &&
+      expirationDate !== "" &&
+      cvv !== "" &&
+      agreementChecked
+    );
+  };
+
+  const handleSubmit = () => {
+    if (isFormValid()) {
+      cartCleaner();
+    } else {
+      alert("Пожалуйста, заполните все поля формы.");
+    }
+  };
 
   return (
     <div
@@ -55,32 +101,50 @@ const CartPay = () => {
         <input
           style={{ padding: "3%", margin: "2% 0" }}
           type="text"
+          name="name"
           placeholder="Имя"
+          value={formFields.name}
+          onChange={handleInputChange}
         />
         <input
           style={{ padding: "3%", margin: "2% 0" }}
           type="text"
+          name="surname"
           placeholder="Фамилия"
+          value={formFields.surname}
+          onChange={handleInputChange}
         />
         <input
           style={{ padding: "3%", margin: "2% 0" }}
           type="email"
+          name="email"
           placeholder="Email"
+          value={formFields.email}
+          onChange={handleInputChange}
         />
         <input
           style={{ padding: "3%", margin: "2% 0" }}
-          type="text"
+          type="number"
+          name="cardNumber"
           placeholder="Номер карты"
+          value={formFields.cardNumber}
+          onChange={handleInputChange}
         />
         <input
           style={{ padding: "3%", margin: "2% 0" }}
           type="text"
+          name="expirationDate"
           placeholder="Дата окончания:(MM/YY)"
+          value={formFields.expirationDate}
+          onChange={handleInputChange}
         />
         <input
-          style={{ padding: "3%", margin: "2% 0 5%" }}
-          type="text"
+          style={{ padding: "3%", margin: "2% 0" }}
+          type="number"
+          name="cvv"
           placeholder="CVV"
+          value={formFields.cvv}
+          onChange={handleInputChange}
         />
         <a
           href="https://help.netflix.com/legal/termsofuse"
@@ -94,7 +158,13 @@ const CartPay = () => {
         >
           <label htmlFor="agreementCheckbox" color="black">
             Прочитано и согласен{" "}
-            <input type="checkbox" id="agreementCheckbox" />
+            <input
+              type="checkbox"
+              id="agreementCheckbox"
+              name="agreementChecked"
+              checked={formFields.agreementChecked}
+              onChange={handleInputChange}
+            />
           </label>
         </div>
         <div
@@ -114,7 +184,8 @@ const CartPay = () => {
         </div>
         <Link to="/library">
           <button
-            onClick={cartCleaner}
+            onClick={handleSubmit}
+            disabled={!isFormValid()}
             style={{
               cursor: "pointer",
               color: "rgb(255,255,255)",
@@ -122,6 +193,7 @@ const CartPay = () => {
               border: "none",
               textAlign: "center",
               padding: "3%",
+              width: "100%",
               margin: "2% 0",
               borderRadius: "5px",
               fontSize: "20px",

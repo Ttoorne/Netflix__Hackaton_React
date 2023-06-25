@@ -13,12 +13,15 @@ import {
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useCart } from "../../contexts/CartContextProvider";
 import { useAuth } from "../../contexts/AuthContextProvider";
+import { useLibrary } from "../../contexts/LibraryContextProvider";
+import { ADMIN } from "../../helpers/consts";
 
 const ProductDetails = () => {
   const { getProductDetails, productDetails, recentlyWatched } = useProducts();
   const { addProductToCart, showAlert, setShowAlert, checkProductCart } =
     useCart();
   const { id } = useParams();
+  const { checkProductLibrary } = useLibrary();
 
   const {
     user: { email },
@@ -167,13 +170,39 @@ const ProductDetails = () => {
               >
                 {productDetails?.description}
               </Typography>
-
-              {checkProductCart(productDetails?.id) ? (
+              {email === ADMIN ? null : checkProductLibrary(
+                  productDetails?.id
+                ) ? (
                 <Box
                   sx={{
                     display: "flex",
                     width: "100%",
                     alignItems: "center",
+                    marginTop: "5%",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      width: "40%",
+                      margin: "auto",
+                      fontSize: "22px",
+                      textAlign: "center",
+                      padding: "2% 3%",
+                      border: "1px solid gray",
+                      borderRadius: "15px",
+                      color: "rgb(255,255,255)",
+                    }}
+                  >
+                    Уже приобретено
+                  </Typography>
+                </Box>
+              ) : checkProductCart(productDetails?.id) ? (
+                <Box
+                  sx={{
+                    display: "flex",
+                    width: "100%",
+                    alignItems: "center",
+                    marginTop: "5%",
                   }}
                 >
                   <Typography
@@ -198,6 +227,7 @@ const ProductDetails = () => {
                     width: "100%",
                     alignItems: "center",
                     justifyContent: "center",
+                    marginTop: "5%",
                   }}
                 >
                   <Button
@@ -205,9 +235,14 @@ const ProductDetails = () => {
                       width: "50%",
                       fontSize: "18px",
                       borderRadius: "10px 0px 0px 10px",
+                      backgroundColor: "rgb(229, 9, 20)",
+                      "&:hover": {
+                        backgroundColor: "rgb(229, 9, 20)",
+                        filter: "brightness(0.8)",
+                        color: "white",
+                      },
                     }}
                     startIcon={<AddShoppingCartIcon />}
-                    color="secondary"
                     size="big"
                     onClick={() => addProductToCart(productDetails)}
                     variant="contained"
@@ -218,11 +253,17 @@ const ProductDetails = () => {
                     <Button
                       sx={{
                         width: "10%",
-                        fontWeight: "600",
+                        fontWeight: "700",
                         fontSize: "18px",
+                        color: "black",
                         borderRadius: "0px 10px 10px 0px",
+                        backgroundColor: "white",
+                        "&:hover": {
+                          filter: "brightness(0.8 )",
+                          background: "white",
+                          color: "black",
+                        },
                       }}
-                      color="error"
                       size="big"
                       onClick={() => addProductToCart(productDetails)}
                       variant="contained"
@@ -236,6 +277,13 @@ const ProductDetails = () => {
                         fontWeight: "500",
                         fontSize: "18px",
                         borderRadius: "0px 10px 10px 0px",
+                        color: "black",
+                        backgroundColor: "white",
+                        "&:hover": {
+                          filter: "brightness(0.8 )",
+                          background: "white",
+                          color: "black",
+                        },
                       }}
                       color="error"
                       size="big"

@@ -4,17 +4,17 @@
       "title": "Человек-паук: Паутина вселенных",
       "description": "Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.",
       "picture": "https://upload.wikimedia.org/wikipedia/ru/thumb/1/1d/Spider-Man_-_Across_the_Spider-Verse.jpg/1200px-Spider-Man_-_Across_the_Spider-Verse.jpg",
-      "price": 60,
+      "price": 20,
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 6,
       "trailer": "https://www.youtube.com/watch?v=bCjPNuSTNbc"
     },
     {
-      "title": "Batman",
+      "title": "Бэтмен",
       "description": "После двух лет поисков правосудия на улицах Готэма для своих сограждан Бэтмен становится олицетворением беспощадного возмездия. Когда в городе происходит серия жестоких нападений на представителей элиты, загадочные улики приводят Брюса Уэйна в самые темные закоулки преступного мира, где он встречает Женщину-Кошку, Пингвина, Кармайна Фальконе и Загадочника. Теперь под прицелом оказывается сам Бэтмен, которому предстоит отличить друга от врага и восстановить справедливость во имя Готэма.",
-      "picture": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQPn2H9xkTCBu6OGfJFU88kQnPaqefb-dTnP8Tjns0-0gzrt4xruHEK7KEkQm0yPfCk",
-      "price": 60,
+      "picture": "https://gamemag.ru/images/imagemanager/cache/e0/5b72/e05b72_photo-2022-02-01-18-09-42.jpg",
+      "price": 20,
       "category": "Films",
       "genre": "Action",
       "id": 7,
@@ -31,21 +31,21 @@
       "id": 8
     },
     {
-      "title": "Shrek",
-      "description": "«Шрек» (англ. Shrek) — американский компьютерно-анимационный фэнтезийный комедийный фильм, основанный на одноименной детской книге Уильяма Стейга. Снятый Эндрю Адамсоном и Вики Дженсон (в их полнометражных режиссёрских дебютах) по сценарию Теда Эллиота, Терри Россио, Джо Стиллмана и Роджера С. Х.",
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKInNhBpEhe9iMRVfPAd1ceET_uVstzgfSje9_Nz_L&s",
-      "price": 30,
+      "title": "Шрек",
+      "description": "Жил да был в сказочном государстве большой зеленый великан по имени Шрэк. Жил он в гордом одиночестве в лесу, на болоте, которое считал своим. Но однажды злобный коротышка — лорд Фаркуад, правитель волшебного королевства, безжалостно согнал на Шрэково болото всех сказочных обитателей.  И беспечной жизни зеленого великана пришел конец. Но лорд Фаркуад пообещал вернуть Шрэку болото, если великан добудет ему прекрасную принцессу Фиону, которая томится в неприступной башне, охраняемой огнедышащим драконом.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/c198c40f-51aa-43ad-b0e1-1ee89034fcce/orig",
+      "price": 10,
       "trailer": "https://www.youtube.com/watch?v=HLQ1cK9Edhc",
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 9
     },
     {
-      "title": "Мстители",
-      "description": "Майлз Моралес отправляется в приключение по мультивселенной вместе с Гвен Стейси и новой командой Людей-пауков, которым предстоит столкнуться с могущественным злодеем.",
-      "picture": "https://upload.wikimedia.org/wikipedia/ru/3/3c/The_Avengers_2012_logo.jpg",
-      "price": 40,
-      "trailer": "https://www.youtube.com/watch?v=5iw-hJ6xteE",
+      "title": "Мстители: Финал",
+      "description": "Оставшиеся в живых члены команды Мстителей и их союзники должны разработать новый план, который поможет противостоять разрушительным действиям могущественного титана Таноса. После наиболее масштабной и трагической битвы в истории они не могут допустить ошибку.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/ae22f153-9715-41bb-adb4-f648b3e16092/300x450",
+      "price": 20,
+      "trailer": "https://www.youtube.com/watch?v=QPRtU7EqQy0",
       "category": "Films",
       "genre": "Action",
       "id": 10
@@ -53,9 +53,9 @@
     {
       "title": "Атака Титанов",
       "description": "Уже многие годы человечество ведёт борьбу с титанами — огромными существами, которые не обладают особым интеллектом, зато едят людей и получают от этого удовольствие. После продолжительной борьбы остатки человечества построили высокую стену, окружившую страну людей, через которую титаны пройти не могли.",
-      "picture": "data:image/jpeg;base64,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",
-      "price": 40,
-      "trailer": "https://www.youtube.com/watch?v=F0sqfPkCcyM",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/e42e60bc-0772-4a3a-a24f-4218febf9386/300x450",
+      "price": 10,
+      "trailer": "https://www.youtube.com/watch?v=BOQJyi1sVag",
       "category": "Series",
       "genre": "Action",
       "id": 11
@@ -69,6 +69,236 @@
       "category": "Series",
       "genre": "Thriller",
       "id": 12
+    },
+    {
+      "title": "Побег из Шоушенка",
+      "description": "Бухгалтер Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решётки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, обладающий живым умом и доброй душой, находит подход как к заключённым, так и к охранникам, добиваясь их особого к себе расположения.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/0b76b2a2-d1c7-4f04-a284-80ff7bb709a4/300x450",
+      "price": 10,
+      "trailer": "https://www.youtube.com/watch?v=kgAeKpAPOYk",
+      "category": "Films",
+      "genre": "Thriller",
+      "id": 13
+    },
+    {
+      "title": "Неприкасаемые(\"1+1\")",
+      "description": "Пострадав в результате несчастного случая, богатый аристократ Филипп нанимает в помощники человека, который менее всего подходит для этой работы, – молодого жителя предместья Дрисса, только что освободившегося из тюрьмы. Несмотря на то, что Филипп прикован к инвалидному креслу, Дриссу удается привнести в размеренную жизнь аристократа дух приключений.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/bf93b465-1189-4155-9dd1-cb9fb5cb1bb5/300x450",
+      "price": 15,
+      "trailer": "https://www.youtube.com/watch?v=tTwFeGArcrs",
+      "category": "Films",
+      "genre": "Comedy",
+      "id": 14
+    },
+    {
+      "title": "Бойцовский Клуб",
+      "description": "Сотрудник страховой компании страдает хронической бессонницей и отчаянно пытается вырваться из мучительно скучной жизни. Однажды в очередной командировке он встречает некоего Тайлера Дёрдена — харизматического торговца мылом с извращенной философией. Тайлер уверен, что самосовершенствование — удел слабых, а единственное, ради чего стоит жить, — саморазрушение.  Проходит немного времени, и вот уже новые друзья лупят друг друга почем зря на стоянке перед баром, и очищающий мордобой доставляет им высшее блаженство. Приобщая других мужчин к простым радостям физической жестокости, они основывают тайный Бойцовский клуб, который начинает пользоваться невероятной популярностью.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/8ef070c9-2570-4540-9b83-d7ce759c0781/300x450",
+      "price": 10,
+      "trailer": "https://www.youtube.com/watch?v=C7-7qQ61QHU",
+      "category": "Films",
+      "genre": "Thriller",
+      "id": 15
+    },
+    {
+      "title": " По соображениям совести",
+      "description": "Медик американской армии времён Второй мировой войны Десмонд Досс, который служил во время битвы за Окинаву, отказывается убивать людей и становится первым идейным уклонистом в американской истории, удостоенным Медали Почёта.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/83a758fc-d3f9-485a-b75f-530fb611d63c/300x450",
+      "price": 15,
+      "trailer": "https://www.youtube.com/watch?v=uazV9_llwrE",
+      "category": "Films",
+      "genre": "Drama",
+      "id": 16
+    },
+    {
+      "title": "Интерстеллар",
+      "description": "Когда засуха, пыльные бури и вымирание растений приводят человечество к продовольственному кризису, коллектив исследователей и учёных отправляется сквозь червоточину (которая предположительно соединяет области пространства-времени через большое расстояние) в путешествие, чтобы превзойти прежние ограничения для космических путешествий человека и найти планету с подходящими для человечества условиями.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/430042eb-ee69-4818-aed0-a312400a26bf/300x450",
+      "price": 20,
+      "trailer": "https://www.youtube.com/watch?v=qcPfI0y7wRU",
+      "category": "Films",
+      "genre": "Drama",
+      "id": 17
+    },
+    {
+      "title": "Унесённые призраками",
+      "description": "Тихиро с мамой и папой переезжает в новый дом. Заблудившись по дороге, они оказываются в странном пустынном городе, где их ждет великолепный пир. Родители с жадностью набрасываются на еду и к ужасу девочки превращаются в свиней, став пленниками злой колдуньи Юбабы. Теперь, оказавшись одна среди волшебных существ и загадочных видений, Тихиро должна придумать, как избавить своих родителей от чар коварной старухи.  Рейтинг фильма",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/ae3b699c-3db7-4196-a869-39b610bfe706/300x450",
+      "price": 12,
+      "trailer": "https://www.youtube.com/watch?v=bgxiTkAlQrw",
+      "category": "Cartoons",
+      "genre": "",
+      "id": 18
+    },
+    {
+      "title": "Джентльмены",
+      "description": "Один ушлый американец ещё со студенческих лет приторговывал наркотиками, а теперь придумал схему нелегального обогащения с использованием поместий обедневшей английской аристократии и очень неплохо на этом разбогател. Другой пронырливый журналист приходит к Рэю, правой руке американца, и предлагает тому купить киносценарий, в котором подробно описаны преступления его босса при участии других представителей лондонского криминального мира — партнёра-еврея, китайской диаспоры, чернокожих спортсменов и даже русского олигарха.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/637271d5-61b4-4e46-ac83-6d07494c7645/300x450",
+      "price": 15,
+      "trailer": "https://www.youtube.com/watch?v=dABPCMxu074",
+      "category": "Films",
+      "genre": "Comedy",
+      "id": 19
+    },
+    {
+      "title": "Клаус",
+      "description": "Владелец почтовой империи, чтобы научить ленивого отпрыска по имени Джеспер уму-разуму, отправляет его на крайний север в город Смиренсбург. Тот должен организовать там почтовое отделение и за год обработать не менее 6000 писем. Прибыв на место, парень оказывается в зоне боевых действий: два семейных клана, так уж исторически сложилось, питают взаимную ненависть и свято чтут многовековую традицию при любой возможности мутузить друг друга и делать пакости. Разумеется, в такой обстановке не до писем, и почтовое отделение давно превратилось в курятник. Уже практически отчаявшись, Джеспер посещает лесного отшельника по имени Клаус, и их знакомство положит начало удивительным событиям.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/279f9f19-6a29-4fae-935e-54ddf80c653b/300x450",
+      "price": 15,
+      "trailer": "https://www.youtube.com/watch?v=b_QKhM7jV-s",
+      "category": "Cartoons",
+      "genre": "Melodrama",
+      "id": 20
+    },
+    {
+      "title": "Один дома",
+      "description": "Американское семейство отправляется из Чикаго в Европу, но в спешке сборов бестолковые родители забывают дома... одного из своих детей. Юное создание, однако, не теряется и демонстрирует чудеса изобретательности. И когда в дом залезают грабители, им приходится не раз пожалеть о встрече с милым крошкой.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/022a58e3-5b9b-411b-bfb3-09fedb700401/300x450",
+      "price": 10,
+      "trailer": "https://www.youtube.com/watch?v=bBU_64CTNsw",
+      "category": "Films",
+      "genre": "Comedy",
+      "id": 21
+    },
+    {
+      "title": "Мой сосед Тоторо",
+      "description": "Сестры Сацуки и Мэй переезжают вместе с папой в деревенский дом. Однажды девочки обнаруживают, что по соседству с ними живут лесные духи — хранители леса во главе со своим могущественным и добрым повелителем Тоторо. Постепенно Тоторо становится другом девочек, помогая им в их повседневных приключениях.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/029f472e-bf4d-4e00-b7c0-f45c08cf8b82/300x450",
+      "price": 10,
+      "trailer": "https://www.youtube.com/watch?v=19IVDAzcNxs",
+      "category": "Cartoons",
+      "genre": "",
+      "id": 22
+    },
+    {
+      "title": "Рататуй",
+      "description": "Крыс Реми обладает уникальным вкусом. Он готов рисковать собственной жизнью, чтобы посмотреть любимое кулинарное шоу и раздобыть какую-нибудь приправку или просто свежий продукт. Реми живет со своими сородичами, которые его не понимают и не принимают его увлечения кулинарией. Когда Реми случайно попадает на кухню шикарного ресторана, он решает воспользоваться выпавшим ему шансом и проверить свои навыки.  На эту же кухню попадает и юный Лингвини. Всё, на что он может рассчитывать — это должность уборщика. Но он тоже получает свой шанс.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/894f7e3c-cedf-4e5c-946a-9021efdf17dd/300x450",
+      "price": 12,
+      "trailer": "https://www.youtube.com/watch?v=xhO3MUto0ck",
+      "category": "Cartoons",
+      "genre": "Comedy",
+      "id": 23
+    },
+    {
+      "title": "Крестный отец",
+      "description": "Криминальная сага, повествующая о нью-йоркской сицилийской мафиозной семье Корлеоне. Фильм охватывает период 1945-1955 годов.  Глава семьи, Дон Вито Корлеоне, выдаёт замуж свою дочь. В это время со Второй мировой войны возвращается его любимый сын Майкл. Майкл, герой войны, гордость семьи, не выражает желания заняться жестоким семейным бизнесом. Дон Корлеоне ведёт дела по старым правилам, но наступают иные времена, и появляются люди, желающие изменить сложившиеся порядки. На Дона Корлеоне совершается покушение.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/c11652e8-653b-47c1-8e72-1552399a775b/300x450",
+      "price": 10,
+      "trailer": "https://www.youtube.com/watch?v=ar1SHxgeZUc",
+      "category": "Films",
+      "genre": "Drama",
+      "id": 24
+    },
+    {
+      "title": " Мадагаскар ",
+      "description": "Четверо изнеженных животных из Центрального зоопарка в Нью-Йорке - лев Алекс, зебра Марти, жираф Мелман и гиппопотамиха Глория - решаются на побег. Оказавшись после кораблекрушения на экзотическом острове Мадагаскар, населенном лемурами и поедающими их фоссами, путешественники с ужасом понимают, что с городскими привычками им придется распрощаться.  Здесь нет людей, любимых клеток, вкусной кормежки. Начинается шоу «Последний герой» только с животными - нашим друзьям нужно выжить в непривычной среде обитания, где на каждом шагу подстерегает опасность...",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/ce4b0f97-4811-47ea-b3f1-dfc3395f7849/300x450",
+      "price": 12,
+      "trailer": "https://www.youtube.com/watch?v=ma1xEDK0_cw",
+      "category": "Cartoons",
+      "genre": "Comedy",
+      "id": 25
+    },
+    {
+      "title": "Семь жизней",
+      "description": "Инженер Бен отправляется в необычное путешествие. В ходе своей поездки он встречает семерых незнакомцев, включая смертельно больную Эмили, которая называет себя девушкой с подбитыми крыльями. Бен неожиданно влюбляется в нее, что сильно усложняет его первоначальный план. Сможет ли он разгадать послание судьбы?",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/4c34cc44-cf15-451d-b878-8efc2c624b58/300x450",
+      "price": 15,
+      "trailer": "https://www.youtube.com/watch?v=3sO8hJoKV5A",
+      "category": "Films",
+      "genre": "Drama",
+      "id": 26
+    },
+    {
+      "title": " Вверх",
+      "description": "78-летний ворчун Карл Фредриксен считает, что жизнь обходит его стороной. Чтобы сдержать обещание, данное своей почившей жене, он решает осуществить свою мечту о великом приключении, привязав тысячи воздушных шариков к своему дому и улетев в дебри Южной Америки. Не пролетев и полмили, путешественник обнаруживает, что он ненароком прихватил с собой крайне разговорчивого и неисправимо жизнерадостного 8-летнего мальчика по имени Рассел...",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/8d19eeb1-608b-4cdd-917e-b3a255471e2b/300x450",
+      "price": 15,
+      "trailer": "https://www.youtube.com/watch?v=NYwpa1nxH84",
+      "category": "Cartoons",
+      "genre": "Comedy",
+      "id": 27
+    },
+    {
+      "title": "Твоё имя",
+      "description": "Токийский парень Таки и провинциальная девушка Мицуха обнаруживают, что между ними существует странная связь. Во сне они меняются телами и проживают жизни друг друга. Но однажды эта способность исчезает так же внезапно, как появилась. Таки решает во что бы то ни стало отыскать Мицуху.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/e849937d-99d7-418f-bbaa-0a7e7cfff385/300x450",
+      "price": 12,
+      "trailer": "https://www.youtube.com/watch?v=tT7b5wR0IOM",
+      "category": "Cartoons",
+      "genre": "Drama",
+      "id": 28
+    },
+    {
+      "title": "Терминал ",
+      "description": "Фильм рассказывает историю Виктора Наворски, отправившегося в Нью-Йорк из Восточной Европы. Пока Виктор летел в самолете, на его родине произошел государственный переворот. Оказавшись в международном аэропорту имени Джона Кеннеди с паспортом ниоткуда, он не имеет права въехать в Соединенные Штаты и должен коротать свои дни и ночи на скамейках у выхода 67, пока война в его родной стране не закончится.  Тянутся недели и месяцы, и Виктор обнаруживает, что небольшой мирок терминала может быть наполнен абсурдом, щедростью, амбициями, развлечениями, желанием сохранить свой статус, интуитивной прозорливостью и даже любовью к очаровательной стюардессе Амелии. Виктору удается завоевать симпатии всех, кроме одного человека — чиновника аэропорта Фрэнка Диксона, который считает его бюрократической ошибкой, проблемой, которую он не может контролировать, но от которой жаждет избавиться.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/0bb13a61-cfbe-4c76-b72e-f799bc9b7d79/300x450",
+      "price": 12,
+      "trailer": "https://www.youtube.com/watch?v=eefGGA6sYlU",
+      "category": "Films",
+      "genre": "Melodrama",
+      "id": 29
+    },
+    {
+      "title": "Железный человек",
+      "description": "Миллиардер-изобретатель Тони Старк попадает в плен к Афганским террористам, которые пытаются заставить его создать оружие массового поражения. В тайне от своих захватчиков Старк конструирует высокотехнологичную киберброню, которая помогает ему сбежать. Однако по возвращении в США он узнаёт, что в совете директоров его фирмы плетётся заговор, чреватый страшными последствиями. Используя своё последнее изобретение, Старк пытается решить проблемы своей компании радикально...",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/c8e2f069-15f1-4803-95c0-aba858fec360/300x450",
+      "price": 15,
+      "trailer": "https://www.youtube.com/watch?v=i_IIxuHAClc",
+      "category": "Films",
+      "genre": "Action",
+      "id": 30
+    },
+    {
+      "title": "Невидимая сторона",
+      "description": "Благополучная белая семья берет к себе толстого, неграмотного бездомного темнокожего подростка и помогает стать ему спортивной звездой, и поступить в университет.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/80328c23-fa23-4c39-a61f-6f0b3aa3fe86/300x450",
+      "price": 10,
+      "trailer": "https://www.youtube.com/watch?v=uCBjDSs42wI",
+      "category": "Films",
+      "genre": "Drama",
+      "id": 31
+    },
+    {
+      "title": "Моана ",
+      "description": "Бесстрашная Моана, дочь вождя маленького племени на острове в Тихом океане, больше всего на свете мечтает о приключениях и решает отправиться в опасное морское путешествие. Вместе с некогда могущественным полубогом Мауи им предстоит пересечь океан, сразиться со страшными чудовищами и разрушить древнее заклятие.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/f06aa25d-2f76-4bac-8d12-29436fd589bc/300x450",
+      "price": 12,
+      "trailer": "https://www.youtube.com/watch?v=6HZr-6GKbJI",
+      "category": "Cartoons",
+      "genre": "Comedy",
+      "id": 32
+    },
+    {
+      "title": "В погоне за счастьем",
+      "description": "Крис Гарднер – отец-одиночка. Воспитывая пятилетнего сына, Крис изо всех сил старается сделать так, чтобы ребенок рос счастливым. Работая продавцом, он не может оплатить квартиру, и их выселяют.  Оказавшись на улице, но не желая сдаваться, отец устраивается стажером в брокерскую компанию, рассчитывая получить должность специалиста. Только на протяжении стажировки он не будет получать никаких денег, а стажировка длится 6 месяцев...",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/88d2a9f4-8bc7-451a-b6ef-9eb8bef2b245/300x450",
+      "price": 15,
+      "trailer": "https://www.youtube.com/watch?v=52yVnzbc7JQ",
+      "category": "Films",
+      "genre": "Drama",
+      "id": 33
+    },
+    {
+      "title": "Кот в сапогах 2: Последнее желание",
+      "description": "Промотав восемь жизней из девяти и до смерти испугавшись пришедшего за ним волка-охотника за головами, Кот в сапогах внимает совету врача и заселяется в дом местной кошатницы. Там он смиряется с установленными порядками, отращивает бороду и теряет тягу к подвигам и приключениям, но только до тех пор, пока не узнаёт о волшебной карте, которая указывает путь к где-то упавшей Звезде желаний. Кот в сапогах твёрдо решает отыскать Звезду, чтобы вернуть свои жизни, и в компании притворявшегося кошачьим пёсика отправляется красть карту у известного коллекционера волшебных предметов Джека Хорнера.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/19b2a831-d81b-4364-a82a-dc6ca779023f/300x450",
+      "price": 15,
+      "trailer": "https://www.youtube.com/watch?v=JA8Xw0ffel8",
+      "category": "Cartoons",
+      "genre": "Comedy",
+      "id": 34
+    },
+    {
+      "title": "Аватар: Легенда об Аанге",
+      "description": "Мир разделен на четыре народа: Водные племена, королевство Земли, Воздушные кочевники и Огненная нация. Представители каждого народа обладают способностями управления своей стихией и именуют себя магами Воды, Земли, Воздуха или Огня. Только Аватар является властелином всех четырех стихий. Его роль заключается в поддержке баланса между народами и сохранении мирового порядка.  Однажды предводитель Огненной нации Хозяин Огня развязал войну с целью подчинить себе остальные народы. Отвественность за спасение мира легла на плечи двенадцатилетного мальчика, мага Воздуха по имени Аанг, который узнал, что он Аватар. Аанг отправляется в опасное путешествие вместе со своими отважными друзьями из племени Воды, Катарой и ее братом Соккой. Ему предстоит овладеть всеми стихиями, пройти через множество испытаний, перебороть свои страхи и сразить Хозяина Огня, чтобы остановить войну и восстановить равновесие в мире.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/3dd9b97c-87a0-4e1e-9a6e-340d4e04bfce/1920x",
+      "price": 12,
+      "trailer": "https://www.youtube.com/watch?v=hJ3MVEk8xOQ",
+      "category": "Series",
+      "genre": "",
+      "id": 35
     }
   ]
 }
