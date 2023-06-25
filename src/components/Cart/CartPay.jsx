@@ -2,15 +2,19 @@ import React, { useEffect, useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import { useLibrary } from "../../contexts/LibraryContextProvider";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContextProvider";
 
 const CartPay = () => {
   const { cart, getCart } = useCart();
   const { library, addLibraryProduct, getLibrary } = useLibrary();
+  const {
+    user: { email },
+  } = useAuth();
 
   const [formFields, setFormFields] = useState({
     name: "",
     surname: "",
-    email: "",
+    email: email,
     cardNumber: "",
     expirationDate: "",
     cvv: "",
