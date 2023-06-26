@@ -1,20 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   Alert,
+  Avatar,
   Box,
   Button,
   Card,
   CardContent,
   CardMedia,
+  TextField,
   Typography,
 } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useCart } from "../../contexts/CartContextProvider";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { useLibrary } from "../../contexts/LibraryContextProvider";
-import { ADMIN } from "../../helpers/consts";
+import { ADMIN, API } from "../../helpers/consts";
+import { useComment } from "../../contexts/CommentContextProvider";
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
 
 const ProductDetails = () => {
   const { getProductDetails, productDetails, recentlyWatched } = useProducts();
@@ -22,6 +27,7 @@ const ProductDetails = () => {
     useCart();
   const { id } = useParams();
   const { checkProductLibrary } = useLibrary();
+  const { getComments, addComment, deleteComment, comments } = useComment();
 
   const {
     user: { email },
@@ -76,18 +82,67 @@ const ProductDetails = () => {
     return null;
   };
 
+  // comments
+  const [newComment, setNewComment] = useState("");
+
+  useEffect(() => {
+    getComments();
+  }, [getComments]);
+
+  const handleCommentChange = (e) => {
+    setNewComment(e.target.value);
+  };
+
+  const handleAddComment = () => {
+    const comment = {
+      uniqueId: Date.now(),
+      text: newComment,
+      email: email,
+      id: productDetails?.id,
+    };
+    if (!email) {
+      navigate("/Auth");
+      return;
+    }
+    addComment(comment);
+    setNewComment("");
+  };
+
+  // random color
+  // Функция для генерации случайного цвета в формате RGB
+  const generateRandomColor = () => {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
+  const [randomColor, setRandomColor] = useState(generateRandomColor());
+
+  const handleGenerateColor = () => {
+    const newColor = generateRandomColor();
+    setRandomColor(newColor);
+  };
+
+  // likes and dislikes
+  const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0);
+
+  const handleLike = () => {
+    setLikes(likes + 1);
+  };
+
+  const handleDislike = () => {
+    setDislikes(dislikes + 1);
+  };
+
   return (
     <Box
       className="product-details-container"
       sx={{ width: "75%", margin: "auto", marginBottom: "5%" }}
     >
       {showAlert && (
-        <Alert
-          sx={{ width: "40%", margin: "auto" }}
-          onClose={() => {
-            handleCloseAlert();
-          }}
-        >
+        <Alert sx={{ width: "40%", margin: "auto" }} onClose={handleCloseAlert}>
           Успешно добавлено
         </Alert>
       )}
@@ -125,8 +180,25 @@ const ProductDetails = () => {
               boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
             }}
             image={productDetails?.picture}
-            title="green iguana"
+            title="постер"
           />
+          <Box sx={{ display: "flex", width: "35%", margin: "8% auto" }}>
+            <Box sx={{ padding: "0 1%" }}>
+              <Button sx={{ color: "rgb(255,255,255)" }} onClick={handleLike}>
+                {likes}
+                <ThumbUpOffAltIcon fontSize="large" />
+              </Button>
+            </Box>
+            <Box sx={{ padding: "0 1%", color: "rgb(255,255,255)" }}>
+              <Button
+                sx={{ color: "rgb(255,255,255)" }}
+                onClick={handleDislike}
+              >
+                {dislikes}
+                <ThumbDownOffAltIcon fontSize="large" />
+              </Button>
+            </Box>
+          </Box>
         </Box>
 
         <Box className="product-info-main" sx={{ width: "60%" }}>
@@ -370,6 +442,124 @@ const ProductDetails = () => {
           </Box>
         </Box>
       )}
+      <Box
+        className="comments"
+        sx={{
+          marginTop: "10%",
+          color: "rgb(255,255,255)",
+        }}
+      >
+        <Typography
+          variant="h5"
+          sx={{ marginBottom: "3%", fontSize: "25px", fontWeight: "600" }}
+        >
+          Комментарии (
+          {
+            comments.filter((comment) => comment?.id === productDetails?.id)
+              .length
+          }
+          )
+        </Typography>
+
+        {comments.map((comment) =>
+          productDetails?.id === comment?.id ? (
+            <Card
+              key={comment.uniqueId}
+              sx={{
+                marginBottom: "2%",
+                borderRadius: "20px",
+                padding: "0 0 1% 1%",
+                background: "transparent",
+                border: "1px solid rgb(35, 35, 35)",
+              }}
+            >
+              <CardContent sx={{ display: "flex" }}>
+                <Box sx={{ padding: "5px 2% 1% 0" }}>
+                  <Avatar
+                    alt={comment.email}
+                    sx={{
+                      backgroundColor:
+                        comment.email === email ? randomColor : null,
+                    }}
+                    src="/static/images/avatar/2.jpg"
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    color: "rgb(255,255,255)",
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <Typography variant="h6" sx={{ fontWeight: "600" }}>
+                    {comment.email}
+                  </Typography>
+                  <Typography variant="body1" sx={{ fontWeight: "400" }}>
+                    {comment.text}
+                  </Typography>
+                  {email === comment.email || email === ADMIN ? (
+                    <Button
+                      variant="outlined"
+                      onClick={() => deleteComment(comment.uniqueId)}
+                      sx={{
+                        marginTop: "2%",
+                        alignSelf: "flex-end",
+                        width: "30%",
+                        border: "none",
+                        color: "#e30914",
+                        borderRadius: "15px",
+                        "&:hover": {
+                          border: "none",
+                          color: "red",
+                          backgroundColor: "rgb(35, 35, 35)",
+                          borderRadius: "15px",
+                        },
+                      }}
+                    >
+                      Удалить комментарий
+                    </Button>
+                  ) : null}
+                </Box>
+              </CardContent>
+            </Card>
+          ) : null
+        )}
+
+        <Box sx={{ marginTop: "7%" }}>
+          <TextField
+            id="comment"
+            label="Оставьте комментарий"
+            variant="filled"
+            multiline
+            rows={4}
+            fullWidth
+            value={newComment}
+            onChange={handleCommentChange}
+            sx={{
+              borderRadius: "20px",
+              padding: "1% 3%",
+              background: "transparent",
+              color: "rgb(255,255,255) !important",
+              border: "3px solid rgb(35, 35, 35)",
+            }}
+            InputLabelProps={{ sx: { color: "gray", paddingLeft: "2%" } }}
+            InputProps={{
+              sx: {
+                color: "rgb(255, 255, 255)",
+              },
+            }}
+          />
+
+          <Button
+            variant="contained"
+            onClick={handleAddComment}
+            sx={{ marginTop: "2%", padding: "1% 2%", borderRadius: "20px" }}
+          >
+            Добавить комментарий
+          </Button>
+        </Box>
+      </Box>
     </Box>
   );
 };

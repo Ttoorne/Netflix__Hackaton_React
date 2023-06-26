@@ -8,7 +8,9 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 6,
-      "trailer": "https://www.youtube.com/watch?v=bCjPNuSTNbc"
+      "trailer": "https://www.youtube.com/watch?v=bCjPNuSTNbc",
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Бэтмен",
@@ -18,7 +20,9 @@
       "category": "Films",
       "genre": "Action",
       "id": 7,
-      "trailer": "https://www.youtube.com/watch?v=LTA-a5hOyks"
+      "trailer": "https://www.youtube.com/watch?v=LTA-a5hOyks",
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Флэш",
@@ -28,7 +32,9 @@
       "trailer": "https://www.youtube.com/watch?v=r51cYVZWKdY",
       "category": "Films",
       "genre": "Comedy",
-      "id": 8
+      "id": 8,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Шрек",
@@ -38,7 +44,9 @@
       "trailer": "https://www.youtube.com/watch?v=HLQ1cK9Edhc",
       "category": "Cartoons",
       "genre": "Comedy",
-      "id": 9
+      "id": 9,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Мстители: Финал",
@@ -48,7 +56,9 @@
       "trailer": "https://www.youtube.com/watch?v=QPRtU7EqQy0",
       "category": "Films",
       "genre": "Action",
-      "id": 10
+      "id": 10,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Атака Титанов",
@@ -58,7 +68,9 @@
       "trailer": "https://www.youtube.com/watch?v=BOQJyi1sVag",
       "category": "Series",
       "genre": "Action",
-      "id": 11
+      "id": 11,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Во все тяжкие",
@@ -68,7 +80,9 @@
       "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY",
       "category": "Series",
       "genre": "Thriller",
-      "id": 12
+      "id": 12,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Побег из Шоушенка",
@@ -78,7 +92,9 @@
       "trailer": "https://www.youtube.com/watch?v=kgAeKpAPOYk",
       "category": "Films",
       "genre": "Thriller",
-      "id": 13
+      "id": 13,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Неприкасаемые(\"1+1\")",
@@ -88,7 +104,9 @@
       "trailer": "https://www.youtube.com/watch?v=tTwFeGArcrs",
       "category": "Films",
       "genre": "Comedy",
-      "id": 14
+      "id": 14,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Бойцовский Клуб",
@@ -98,7 +116,9 @@
       "trailer": "https://www.youtube.com/watch?v=C7-7qQ61QHU",
       "category": "Films",
       "genre": "Thriller",
-      "id": 15
+      "id": 15,
+      "likes": [],
+      "comments": []
     },
     {
       "title": " По соображениям совести",
@@ -108,7 +128,9 @@
       "trailer": "https://www.youtube.com/watch?v=uazV9_llwrE",
       "category": "Films",
       "genre": "Drama",
-      "id": 16
+      "id": 16,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Интерстеллар",
@@ -118,7 +140,9 @@
       "trailer": "https://www.youtube.com/watch?v=qcPfI0y7wRU",
       "category": "Films",
       "genre": "Drama",
-      "id": 17
+      "id": 17,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Унесённые призраками",
@@ -128,7 +152,9 @@
       "trailer": "https://www.youtube.com/watch?v=bgxiTkAlQrw",
       "category": "Cartoons",
       "genre": "",
-      "id": 18
+      "id": 18,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Джентльмены",
@@ -138,7 +164,9 @@
       "trailer": "https://www.youtube.com/watch?v=aUIXqj47fLg",
       "category": "Films",
       "genre": "Comedy",
-      "id": 19
+      "id": 19,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Клаус",
@@ -148,7 +176,9 @@
       "trailer": "https://www.youtube.com/watch?v=b_QKhM7jV-s",
       "category": "Cartoons",
       "genre": "Melodrama",
-      "id": 20
+      "id": 20,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Один дома",
@@ -158,7 +188,9 @@
       "trailer": "https://www.youtube.com/watch?v=bBU_64CTNsw",
       "category": "Films",
       "genre": "Comedy",
-      "id": 21
+      "id": 21,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Мой сосед Тоторо",
@@ -168,7 +200,9 @@
       "trailer": "https://www.youtube.com/watch?v=19IVDAzcNxs",
       "category": "Cartoons",
       "genre": "",
-      "id": 22
+      "id": 22,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Рататуй",
@@ -178,7 +212,9 @@
       "trailer": "https://www.youtube.com/watch?v=xhO3MUto0ck",
       "category": "Cartoons",
       "genre": "Comedy",
-      "id": 23
+      "id": 23,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Крестный отец",
@@ -188,7 +224,9 @@
       "trailer": "https://www.youtube.com/watch?v=ar1SHxgeZUc",
       "category": "Films",
       "genre": "Drama",
-      "id": 24
+      "id": 24,
+      "likes": [],
+      "comments": []
     },
     {
       "title": " Мадагаскар ",
@@ -198,7 +236,9 @@
       "trailer": "https://www.youtube.com/watch?v=ma1xEDK0_cw",
       "category": "Cartoons",
       "genre": "Comedy",
-      "id": 25
+      "id": 25,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Семь жизней",
@@ -208,7 +248,9 @@
       "trailer": "https://www.youtube.com/watch?v=3sO8hJoKV5A",
       "category": "Films",
       "genre": "Drama",
-      "id": 26
+      "id": 26,
+      "likes": [],
+      "comments": []
     },
     {
       "title": " Вверх",
@@ -218,7 +260,9 @@
       "trailer": "https://www.youtube.com/watch?v=NYwpa1nxH84",
       "category": "Cartoons",
       "genre": "Comedy",
-      "id": 27
+      "id": 27,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Твоё имя",
@@ -228,7 +272,9 @@
       "trailer": "https://www.youtube.com/watch?v=tT7b5wR0IOM",
       "category": "Cartoons",
       "genre": "Drama",
-      "id": 28
+      "id": 28,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Терминал ",
@@ -238,7 +284,9 @@
       "trailer": "https://www.youtube.com/watch?v=eefGGA6sYlU",
       "category": "Films",
       "genre": "Melodrama",
-      "id": 29
+      "id": 29,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Железный человек",
@@ -248,7 +296,9 @@
       "trailer": "https://www.youtube.com/watch?v=i_IIxuHAClc",
       "category": "Films",
       "genre": "Action",
-      "id": 30
+      "id": 30,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Невидимая сторона",
@@ -258,7 +308,9 @@
       "trailer": "https://www.youtube.com/watch?v=uCBjDSs42wI",
       "category": "Films",
       "genre": "Drama",
-      "id": 31
+      "id": 31,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Моана ",
@@ -268,7 +320,9 @@
       "trailer": "https://www.youtube.com/watch?v=6HZr-6GKbJI",
       "category": "Cartoons",
       "genre": "Comedy",
-      "id": 32
+      "id": 32,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "В погоне за счастьем",
@@ -278,7 +332,9 @@
       "trailer": "https://www.youtube.com/watch?v=52yVnzbc7JQ",
       "category": "Films",
       "genre": "Drama",
-      "id": 33
+      "id": 33,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Кот в сапогах 2: Последнее желание",
@@ -288,7 +344,9 @@
       "trailer": "https://www.youtube.com/watch?v=JA8Xw0ffel8",
       "category": "Cartoons",
       "genre": "Comedy",
-      "id": 34
+      "id": 34,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Аватар: Легенда об Аанге",
@@ -298,7 +356,9 @@
       "trailer": "https://www.youtube.com/watch?v=hJ3MVEk8xOQ",
       "category": "Series",
       "genre": "",
-      "id": 35
+      "id": 35,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Игра престолов",
@@ -308,7 +368,9 @@
       "trailer": "https://www.youtube.com/watch?v=fAOVvJx0Y60",
       "category": "Series",
       "genre": "Melodrama",
-      "id": 36
+      "id": 36,
+      "likes": [],
+      "comments": []
     },
     {
       "title": " Гравити Фолз",
@@ -318,7 +380,9 @@
       "trailer": "https://www.youtube.com/watch?v=TCj5tNjWP0A",
       "category": "Series",
       "genre": "Comedy",
-      "id": 37
+      "id": 37,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Игра в кальмара",
@@ -328,7 +392,9 @@
       "trailer": "https://www.youtube.com/watch?v=oqxAJKy0ii4",
       "category": "Series",
       "genre": "Thriller",
-      "id": 38
+      "id": 38,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Наруто: Ураганные хроники",
@@ -338,7 +404,9 @@
       "trailer": "https://www.youtube.com/watch?v=QczGoCmX-pI",
       "category": "Series",
       "genre": "Action",
-      "id": 39
+      "id": 39,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Рик и Морти",
@@ -348,7 +416,9 @@
       "trailer": "https://www.youtube.com/watch?v=YHkjM3bWDyw",
       "category": "Series",
       "genre": "Comedy",
-      "id": 40
+      "id": 40,
+      "likes": [],
+      "comments": []
     },
     {
       "title": " Пацаны",
@@ -358,7 +428,9 @@
       "trailer": "https://www.youtube.com/watch?v=elTgqUW-NYE",
       "category": "Series",
       "genre": "Action",
-      "id": 41
+      "id": 41,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Очень странные дела",
@@ -368,7 +440,9 @@
       "trailer": "https://www.youtube.com/watch?v=PX6KNzyQfZM",
       "category": "Series",
       "genre": "Thriller",
-      "id": 42
+      "id": 42,
+      "likes": [],
+      "comments": []
     },
     {
       "title": "Оно",
@@ -378,7 +452,9 @@
       "trailer": "https://www.youtube.com/watch?v=IisU-JHj_fU",
       "category": "Films",
       "genre": "Horror",
-      "id": 43
+      "id": 43,
+      "likes": [],
+      "comments": []
     }
   ]
 }

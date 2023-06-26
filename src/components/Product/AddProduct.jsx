@@ -14,6 +14,8 @@ const AddProduct = () => {
     trailer: "",
     category: "",
     genre: "",
+    likes: [],
+    comments: [],
   });
 
   const { addProduct } = useProducts();
@@ -44,6 +46,8 @@ const AddProduct = () => {
       trailer: "",
       category: "",
       genre: "",
+      likes: [],
+      comments: [],
     });
   };
 

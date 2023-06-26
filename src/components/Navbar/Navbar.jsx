@@ -89,6 +89,22 @@ function Navbar() {
     setSearchParams({ q: search });
   }, [search]);
 
+  // random color
+  // Функция для генерации случайного цвета в формате RGB
+  const generateRandomColor = () => {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
+  const [randomColor, setRandomColor] = React.useState(generateRandomColor());
+
+  const handleGenerateColor = () => {
+    const newColor = generateRandomColor();
+    setRandomColor(newColor);
+  };
+
   return (
     <AppBar
       position="static"
@@ -303,7 +319,11 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt={email} src="/static/images/avatar/2.jpg" />
+                <Avatar
+                  alt={email === ADMIN ? "A" : email}
+                  sx={{ backgroundColor: email ? randomColor : null }}
+                  src="/static/images/avatar/2.jpg"
+                />
               </IconButton>
             </Tooltip>
             <Menu
