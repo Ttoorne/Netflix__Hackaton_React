@@ -5,7 +5,7 @@ const NotFoundPage = () => {
     <div
       style={{
         color: "white",
-
+        margin: "10% 0",
         textAlign: "center",
       }}
     >

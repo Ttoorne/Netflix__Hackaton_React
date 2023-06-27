@@ -9,8 +9,8 @@
       "genre": "Comedy",
       "id": 6,
       "trailer": "https://www.youtube.com/watch?v=bCjPNuSTNbc",
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.9",
+      "Kinopoisk": "8.7"
     },
     {
       "title": "Бэтмен",
@@ -21,8 +21,8 @@
       "genre": "Action",
       "id": 7,
       "trailer": "https://www.youtube.com/watch?v=LTA-a5hOyks",
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.8",
+      "Kinopoisk": "7.1"
     },
     {
       "title": "Флэш",
@@ -33,7 +33,7 @@
       "category": "Films",
       "genre": "Comedy",
       "id": 8,
-      "IMBd": 7,
+      "IMBd": "7.2",
       "Kinopoisk": 6.6
     },
     {
@@ -45,8 +45,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 9,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.9",
+      "Kinopoisk": "8.1"
     },
     {
       "title": "Мстители: Финал",
@@ -57,8 +57,8 @@
       "category": "Films",
       "genre": "Action",
       "id": 10,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.4",
+      "Kinopoisk": "7.8"
     },
     {
       "title": "Атака Титанов",
@@ -69,8 +69,8 @@
       "category": "Series",
       "genre": "Action",
       "id": 11,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "9.1",
+      "Kinopoisk": "8.7"
     },
     {
       "title": "Во все тяжкие",
@@ -81,8 +81,8 @@
       "category": "Series",
       "genre": "Thriller",
       "id": 12,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "9.5",
+      "Kinopoisk": "8.9"
     },
     {
       "title": "Побег из Шоушенка",
@@ -93,8 +93,8 @@
       "category": "Films",
       "genre": "Thriller",
       "id": 13,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "9.3",
+      "Kinopoisk": "9.1"
     },
     {
       "title": "Неприкасаемые(\"1+1\")",
@@ -105,8 +105,8 @@
       "category": "Films",
       "genre": "Comedy",
       "id": 14,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.5",
+      "Kinopoisk": "8.8"
     },
     {
       "title": "Бойцовский Клуб",
@@ -117,8 +117,8 @@
       "category": "Films",
       "genre": "Thriller",
       "id": 15,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.8",
+      "Kinopoisk": "8.7"
     },
     {
       "title": " По соображениям совести",
@@ -129,8 +129,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 16,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.1",
+      "Kinopoisk": "8.2"
     },
     {
       "title": "Интерстеллар",
@@ -141,8 +141,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 17,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.6",
+      "Kinopoisk": "8.7"
     },
     {
       "title": "Унесённые призраками",
@@ -153,8 +153,8 @@
       "category": "Cartoons",
       "genre": "",
       "id": 18,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.6",
+      "Kinopoisk": "8.5"
     },
     {
       "title": "Джентльмены",
@@ -165,8 +165,8 @@
       "category": "Films",
       "genre": "Comedy",
       "id": 19,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.8",
+      "Kinopoisk": "8.6"
     },
     {
       "title": "Клаус",
@@ -177,8 +177,8 @@
       "category": "Cartoons",
       "genre": "Melodrama",
       "id": 20,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.2",
+      "Kinopoisk": "8.7"
     },
     {
       "title": "Один дома",
@@ -189,8 +189,8 @@
       "category": "Films",
       "genre": "Comedy",
       "id": 21,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.7",
+      "Kinopoisk": "8.2"
     },
     {
       "title": "Мой сосед Тоторо",
@@ -201,8 +201,8 @@
       "category": "Cartoons",
       "genre": "",
       "id": 22,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.1",
+      "Kinopoisk": "8.2"
     },
     {
       "title": "Рататуй",
@@ -213,8 +213,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 23,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.1",
+      "Kinopoisk": "8"
     },
     {
       "title": "Крестный отец",
@@ -225,8 +225,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 24,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "9.2",
+      "Kinopoisk": "8.7"
     },
     {
       "title": " Мадагаскар ",
@@ -237,8 +237,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 25,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "6.9",
+      "Kinopoisk": "8"
     },
     {
       "title": "Семь жизней",
@@ -249,8 +249,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 26,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.6",
+      "Kinopoisk": "8.2"
     },
     {
       "title": " Вверх",
@@ -261,8 +261,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 27,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.3",
+      "Kinopoisk": "8"
     },
     {
       "title": "Твоё имя",
@@ -273,8 +273,8 @@
       "category": "Cartoons",
       "genre": "Drama",
       "id": 28,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.4",
+      "Kinopoisk": "8.4"
     },
     {
       "title": "Терминал ",
@@ -285,8 +285,8 @@
       "category": "Films",
       "genre": "Melodrama",
       "id": 29,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.4",
+      "Kinopoisk": "8.1"
     },
     {
       "title": "Железный человек",
@@ -297,8 +297,8 @@
       "category": "Films",
       "genre": "Action",
       "id": 30,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.9",
+      "Kinopoisk": "8"
     },
     {
       "title": "Невидимая сторона",
@@ -309,8 +309,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 31,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.6",
+      "Kinopoisk": "8.2"
     },
     {
       "title": "Моана ",
@@ -321,8 +321,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 32,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.6",
+      "Kinopoisk": "7.8"
     },
     {
       "title": "В погоне за счастьем",
@@ -333,8 +333,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 33,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8",
+      "Kinopoisk": "8.3"
     },
     {
       "title": "Кот в сапогах 2: Последнее желание",
@@ -345,8 +345,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 34,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "7.9",
+      "Kinopoisk": "8.1"
     },
     {
       "title": "Аватар: Легенда об Аанге",
@@ -357,8 +357,8 @@
       "category": "Series",
       "genre": "",
       "id": 35,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "9.3",
+      "Kinopoisk": "8.7"
     },
     {
       "title": "Игра престолов",
@@ -369,8 +369,8 @@
       "category": "Series",
       "genre": "Melodrama",
       "id": 36,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "9.2",
+      "Kinopoisk": "9"
     },
     {
       "title": " Гравити Фолз",
@@ -381,8 +381,8 @@
       "category": "Series",
       "genre": "Comedy",
       "id": 37,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.9",
+      "Kinopoisk": "9"
     },
     {
       "title": "Игра в кальмара",
@@ -393,8 +393,8 @@
       "category": "Series",
       "genre": "Thriller",
       "id": 38,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8",
+      "Kinopoisk": "7.6"
     },
     {
       "title": "Наруто: Ураганные хроники",
@@ -405,8 +405,8 @@
       "category": "Series",
       "genre": "Action",
       "id": 39,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.7",
+      "Kinopoisk": "8.3"
     },
     {
       "title": "Рик и Морти",
@@ -417,8 +417,8 @@
       "category": "Series",
       "genre": "Comedy",
       "id": 40,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "9.1",
+      "Kinopoisk": "9"
     },
     {
       "title": " Пацаны",
@@ -429,8 +429,8 @@
       "category": "Series",
       "genre": "Action",
       "id": 41,
-      "IMBd": 7,
-      "Kinopoisk": 6.6
+      "IMBd": "8.7",
+      "Kinopoisk": "8.3"
     },
     {
       "title": "Очень странные дела",
@@ -443,6 +443,30 @@
       "id": 42,
       "IMBd": 7,
       "Kinopoisk": 6.6
+    },
+    {
+      "title": "Оно",
+      "description": "Когда в городке Дерри штата Мэн начинают пропадать дети, несколько ребят сталкиваются со своими величайшими страхами — не только с группой школьных хулиганов, но со злобным клоуном Пеннивайзом, чьи проявления жестокости и список жертв уходят в глубь веков.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/c2554fb1-0c11-49b7-8c99-3a32e696b2ab/300x450",
+      "price": 10,
+      "trailer": "https://www.youtube.com/watch?v=IisU-JHj_fU",
+      "category": "Films",
+      "genre": "Horror",
+      "id": 43,
+      "IMBd": 7,
+      "Kinopoisk": 6.6
+    },
+    {
+      "title": "Война миров Z ",
+      "description": "Бывший сотрудник ООН Джерри Лэйн оказывается в эпицентре эпидемии неизвестного вируса, который за считанные секунды превращает людей в зомби. Пытаясь найти противоядие против вируса, Лэйн путешествует вместе со своей группой почти по всему миру, поражённому эпидемией. Теперь судьба всего мира висит на волоске, и Джерри — его единственная надежда.",
+      "picture": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/59c333df-cee3-4626-b917-92ecdb2f837f/300x450",
+      "price": 0,
+      "trailer": "https://www.youtube.com/watch?v=03TVqbzG_1w",
+      "category": "Films",
+      "genre": "Horror",
+      "IMBd": "7",
+      "Kinopoisk": "7",
+      "id": 44
     }
   ]
 }
