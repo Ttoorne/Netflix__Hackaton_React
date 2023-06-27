@@ -1,0 +1,15 @@
+@media all and (max-width: 900px) {
+  .library-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .library-card-descr {
+    align-items: center;
+  }
+
+  .library-descr-title {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,14 @@
+@media all and (max-width: 900px) {
+  .boxx {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 600px) {
+  .boxx {
+    font-size: 10px;
+  }
+}
