@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useCart } from "../../contexts/CartContextProvider";
-import { useLibrary } from "../../contexts/LibraryContextProvider";
-import { Link } from "react-router-dom";
-import { useAuth } from "../../contexts/AuthContextProvider";
+import React, { useEffect, useState } from 'react';
+import { useCart } from '../../contexts/CartContextProvider';
+import { useLibrary } from '../../contexts/LibraryContextProvider';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContextProvider';
+import './Cart.css';
 
 const CartPay = () => {
   const { cart, getCart } = useCart();
@@ -12,18 +13,18 @@ const CartPay = () => {
   } = useAuth();
 
   const [formFields, setFormFields] = useState({
-    name: "",
-    surname: "",
+    name: '',
+    surname: '',
     email: email,
-    cardNumber: "",
-    expirationDate: "",
-    cvv: "",
+    cardNumber: '',
+    expirationDate: '',
+    cvv: '',
     agreementChecked: false,
   });
 
   const cartCleaner = () => {
-    const cartData = JSON.parse(localStorage.getItem("cart"));
-    const libraryData = JSON.parse(localStorage.getItem("library"));
+    const cartData = JSON.parse(localStorage.getItem('cart'));
+    const libraryData = JSON.parse(localStorage.getItem('library'));
 
     if (libraryData && cartData && cartData.products.length > 0) {
       cartData.products.forEach((product) => {
@@ -31,12 +32,12 @@ const CartPay = () => {
       });
     }
 
-    localStorage.removeItem("cart");
+    localStorage.removeItem('cart');
     getCart();
   };
 
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
   useEffect(() => {
@@ -47,7 +48,7 @@ const CartPay = () => {
     const { name, value, type, checked } = e.target;
     setFormFields((prevFields) => ({
       ...prevFields,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
@@ -62,12 +63,12 @@ const CartPay = () => {
       agreementChecked,
     } = formFields;
     return (
-      name !== "" &&
-      surname !== "" &&
-      email !== "" &&
-      cardNumber !== "" &&
-      expirationDate !== "" &&
-      cvv !== "" &&
+      name !== '' &&
+      surname !== '' &&
+      email !== '' &&
+      cardNumber !== '' &&
+      expirationDate !== '' &&
+      cvv !== '' &&
       agreementChecked
     );
   };
@@ -76,34 +77,34 @@ const CartPay = () => {
     if (isFormValid()) {
       cartCleaner();
     } else {
-      alert("Пожалуйста, заполните все поля формы.");
+      alert('Пожалуйста, заполните все поля формы.');
     }
   };
 
   return (
     <div
+      className="cartpay"
       style={{
-        position: "fixed",
-        top: "50%",
-        left: "82%",
-        transform: "translate(-50%, -50%)",
-        backgroundColor: "beige",
-        color: "rgb(255, 255, 255)",
-        padding: "20px",
-        width: "25%",
-        borderRadius: "15px",
-      }}
-    >
+        position: 'fixed',
+        top: '50%',
+        left: '82%',
+        transform: 'translate(-50%, -50%)',
+        backgroundColor: 'beige',
+        color: 'rgb(255, 255, 255)',
+        padding: '20px',
+        width: '25%',
+        borderRadius: '15px',
+        fontSize: '1em',
+      }}>
       <div
         className="cart-pay"
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        <h2 style={{ textAlign: "center", color: "black", marginBottom: "3%" }}>
+        style={{ display: 'flex', flexDirection: 'column' }}>
+        <h2 style={{ textAlign: 'center', color: 'black', marginBottom: '3%' }}>
           Форма оплаты
         </h2>
         <div className="cart-pay-images"></div>
         <input
-          style={{ padding: "3%", margin: "2% 0" }}
+          style={{ padding: '3%', margin: '2% 0' }}
           type="text"
           name="name"
           placeholder="Имя"
@@ -111,7 +112,7 @@ const CartPay = () => {
           onChange={handleInputChange}
         />
         <input
-          style={{ padding: "3%", margin: "2% 0" }}
+          style={{ padding: '3%', margin: '2% 0' }}
           type="text"
           name="surname"
           placeholder="Фамилия"
@@ -119,7 +120,7 @@ const CartPay = () => {
           onChange={handleInputChange}
         />
         <input
-          style={{ padding: "3%", margin: "2% 0" }}
+          style={{ padding: '3%', margin: '2% 0' }}
           type="email"
           name="email"
           placeholder="Email"
@@ -127,7 +128,7 @@ const CartPay = () => {
           onChange={handleInputChange}
         />
         <input
-          style={{ padding: "3%", margin: "2% 0" }}
+          style={{ padding: '3%', margin: '2% 0' }}
           type="number"
           name="cardNumber"
           placeholder="Номер карты"
@@ -135,7 +136,7 @@ const CartPay = () => {
           onChange={handleInputChange}
         />
         <input
-          style={{ padding: "3%", margin: "2% 0" }}
+          style={{ padding: '3%', margin: '2% 0' }}
           type="text"
           name="expirationDate"
           placeholder="Дата окончания:(MM/YY)"
@@ -143,7 +144,7 @@ const CartPay = () => {
           onChange={handleInputChange}
         />
         <input
-          style={{ padding: "3%", margin: "2% 0" }}
+          style={{ padding: '3%', margin: '2% 0' }}
           type="number"
           name="cvv"
           placeholder="CVV"
@@ -152,16 +153,14 @@ const CartPay = () => {
         />
         <a
           href="https://help.netflix.com/legal/termsofuse"
-          style={{ color: "blue", textDecoration: "underline" }}
-        >
+          style={{ color: 'blue', textDecoration: 'underline' }}>
           Условия пользования и соглашения
         </a>
         <div
           className="cart-pay-check"
-          style={{ color: "black", margin: "2% 0 5%" }}
-        >
+          style={{ color: 'black', margin: '2% 0 5%' }}>
           <label htmlFor="agreementCheckbox" color="black">
-            Прочитано и согласен{" "}
+            Прочитано и согласен{' '}
             <input
               type="checkbox"
               id="agreementCheckbox"
@@ -174,36 +173,34 @@ const CartPay = () => {
         <div
           className="cart-pay-bottom"
           style={{
-            color: "black",
-            textAlign: "center",
-            padding: "3%",
-            margin: "2% 0",
-            fontSize: "20px",
-            fontWeight: "700",
-            backgroundColor: "#dad9d9",
-          }}
-        >
-          Итого к оплате:{" "}
-          <span style={{ color: "#0071eb" }}>{cart.totalPrice}$</span>
+            color: 'black',
+            textAlign: 'center',
+            padding: '3%',
+            margin: '2% 0',
+            fontSize: '20px',
+            fontWeight: '700',
+            backgroundColor: '#dad9d9',
+          }}>
+          Итого к оплате:{' '}
+          <span style={{ color: '#0071eb' }}>{cart.totalPrice}$</span>
         </div>
         <Link to="/library">
           <button
             onClick={handleSubmit}
             disabled={!isFormValid()}
             style={{
-              cursor: "pointer",
-              color: "rgb(255,255,255)",
-              fontWeight: "700",
-              border: "none",
-              textAlign: "center",
-              padding: "3%",
-              width: "100%",
-              margin: "2% 0",
-              borderRadius: "5px",
-              fontSize: "20px",
-              backgroundColor: "rgb(229, 9, 20)",
-            }}
-          >
+              cursor: 'pointer',
+              color: 'rgb(255,255,255)',
+              fontWeight: '700',
+              border: 'none',
+              textAlign: 'center',
+              padding: '3%',
+              width: '100%',
+              margin: '2% 0',
+              borderRadius: '5px',
+              fontSize: '20px',
+              backgroundColor: 'rgb(229, 9, 20)',
+            }}>
             Подтвердить оплату
           </button>
         </Link>
