@@ -257,7 +257,6 @@ const ProductDetails = () => {
                     style={{
                       fontSize: "28px",
                       fontWeight: "700",
-                      color: "gray",
                     }}
                   >
                     {productDetails?.Kinopoisk ? productDetails?.Kinopoisk : 0}
