@@ -72,7 +72,6 @@ const SeriesList = () => {
         className="grid"
         sx={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
           width: '90%',
           margin: 'auto',
         }}>

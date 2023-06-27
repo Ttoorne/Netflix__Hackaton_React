@@ -441,8 +441,8 @@
       "category": "Series",
       "genre": "Thriller",
       "id": 42,
-      "IMBd": "8.7",
-      "Kinopoisk": "8.4"
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Оно",
@@ -453,8 +453,8 @@
       "category": "Films",
       "genre": "Horror",
       "id": 43,
-      "IMBd": "7.3",
-      "Kinopoisk": "7.3"
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Война миров Z ",
