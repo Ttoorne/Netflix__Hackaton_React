@@ -135,11 +135,11 @@ export default function ProductCard({ item }) {
             }}>
             {checkProductLibrary(item.id) ? (
               <div title="Уже в библиотеке">
-                <BookmarkIcon sx={{ color: 'yellow' }} fontSize="3em" />
+                <BookmarkIcon sx={{ color: 'yellow' }} fontSize="medium" />
               </div>
             ) : (
               <div title="Не куплено">
-                <BookmarkBorderIcon fontSize="3em" />
+                <BookmarkBorderIcon fontSize="medium" />
               </div>
             )}
             <div style={{ display: 'flex', marginRight: '5%' }}>
