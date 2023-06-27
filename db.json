@@ -9,8 +9,8 @@
       "genre": "Comedy",
       "id": 6,
       "trailer": "https://www.youtube.com/watch?v=bCjPNuSTNbc",
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Бэтмен",
@@ -21,8 +21,8 @@
       "genre": "Action",
       "id": 7,
       "trailer": "https://www.youtube.com/watch?v=LTA-a5hOyks",
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Флэш",
@@ -33,8 +33,8 @@
       "category": "Films",
       "genre": "Comedy",
       "id": 8,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Шрек",
@@ -45,8 +45,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 9,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Мстители: Финал",
@@ -57,8 +57,8 @@
       "category": "Films",
       "genre": "Action",
       "id": 10,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Атака Титанов",
@@ -69,8 +69,8 @@
       "category": "Series",
       "genre": "Action",
       "id": 11,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Во все тяжкие",
@@ -81,8 +81,8 @@
       "category": "Series",
       "genre": "Thriller",
       "id": 12,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Побег из Шоушенка",
@@ -93,8 +93,8 @@
       "category": "Films",
       "genre": "Thriller",
       "id": 13,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Неприкасаемые(\"1+1\")",
@@ -105,8 +105,8 @@
       "category": "Films",
       "genre": "Comedy",
       "id": 14,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Бойцовский Клуб",
@@ -117,8 +117,8 @@
       "category": "Films",
       "genre": "Thriller",
       "id": 15,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": " По соображениям совести",
@@ -129,8 +129,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 16,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Интерстеллар",
@@ -141,8 +141,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 17,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Унесённые призраками",
@@ -153,8 +153,8 @@
       "category": "Cartoons",
       "genre": "",
       "id": 18,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Джентльмены",
@@ -165,8 +165,8 @@
       "category": "Films",
       "genre": "Comedy",
       "id": 19,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Клаус",
@@ -177,8 +177,8 @@
       "category": "Cartoons",
       "genre": "Melodrama",
       "id": 20,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Один дома",
@@ -189,8 +189,8 @@
       "category": "Films",
       "genre": "Comedy",
       "id": 21,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Мой сосед Тоторо",
@@ -201,8 +201,8 @@
       "category": "Cartoons",
       "genre": "",
       "id": 22,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Рататуй",
@@ -213,8 +213,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 23,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Крестный отец",
@@ -225,8 +225,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 24,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": " Мадагаскар ",
@@ -237,8 +237,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 25,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Семь жизней",
@@ -249,8 +249,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 26,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": " Вверх",
@@ -261,8 +261,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 27,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Твоё имя",
@@ -273,8 +273,8 @@
       "category": "Cartoons",
       "genre": "Drama",
       "id": 28,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Терминал ",
@@ -285,8 +285,8 @@
       "category": "Films",
       "genre": "Melodrama",
       "id": 29,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Железный человек",
@@ -297,8 +297,8 @@
       "category": "Films",
       "genre": "Action",
       "id": 30,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Невидимая сторона",
@@ -309,8 +309,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 31,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Моана ",
@@ -321,8 +321,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 32,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "В погоне за счастьем",
@@ -333,8 +333,8 @@
       "category": "Films",
       "genre": "Drama",
       "id": 33,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Кот в сапогах 2: Последнее желание",
@@ -345,8 +345,8 @@
       "category": "Cartoons",
       "genre": "Comedy",
       "id": 34,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Аватар: Легенда об Аанге",
@@ -357,8 +357,8 @@
       "category": "Series",
       "genre": "",
       "id": 35,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Игра престолов",
@@ -369,8 +369,8 @@
       "category": "Series",
       "genre": "Melodrama",
       "id": 36,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": " Гравити Фолз",
@@ -381,8 +381,8 @@
       "category": "Series",
       "genre": "Comedy",
       "id": 37,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Игра в кальмара",
@@ -393,8 +393,8 @@
       "category": "Series",
       "genre": "Thriller",
       "id": 38,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Наруто: Ураганные хроники",
@@ -405,8 +405,8 @@
       "category": "Series",
       "genre": "Action",
       "id": 39,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Рик и Морти",
@@ -417,8 +417,8 @@
       "category": "Series",
       "genre": "Comedy",
       "id": 40,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": " Пацаны",
@@ -429,8 +429,8 @@
       "category": "Series",
       "genre": "Action",
       "id": 41,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Очень странные дела",
@@ -441,8 +441,8 @@
       "category": "Series",
       "genre": "Thriller",
       "id": 42,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     },
     {
       "title": "Оно",
@@ -453,8 +453,8 @@
       "category": "Films",
       "genre": "Horror",
       "id": 43,
-      "likes": [],
-      "comments": []
+      "IMBd": 7,
+      "Kinopoisk": 6.6
     }
   ]
 }
